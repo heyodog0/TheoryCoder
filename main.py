@@ -5,30 +5,29 @@ import time
 from pathlib import Path
 
 from theorycoder import TheoryCoderAgent
-from envs.babyai_env import BabyAI
-from envs.pb1_env import pb1env
-from envs.sokoban_env import SokobanEnv
-from envs.labyrinth_env import LabyrinthEnv
-from games import BabaIsYou
-from envs.maze_env import MazeEnv
-from envs.cheesemaze_env import CheesemazeEnv
 
 
 def init_engine(game, level_set, level_id):
     if game == 'baba':
+        from games import BabaIsYou
         return BabaIsYou(level_set=level_set, level_id=level_id)
     elif game == 'lava':
         from games import LavaGrid
         return LavaGrid()
     elif game == 'babyai':
+        from envs.babyai_env import BabyAI
         return BabyAI(level_set=level_set, level_id=level_id)
     elif game == 'pb1':
+        from envs.pb1_env import pb1env
         return pb1env(level_set=level_set, level_id=level_id)
     elif game == 'sokoban':
+        from envs.sokoban_env import SokobanEnv
         return SokobanEnv(level_set=level_set, level_id=level_id)
     elif game == 'labyrinth':
+        from envs.labyrinth_env import LabyrinthEnv
         return LabyrinthEnv(level_set=level_set, level_id=level_id)
     elif game == 'cheesemaze':
+        from envs.cheesemaze_env import CheesemazeEnv
         return CheesemazeEnv(level_set=level_set, level_id=level_id)
     else:
         raise ValueError(f"Unsupported game: {game}")

@@ -1,6 +1,4 @@
 import importlib
-from levelrunner import actor
-import utils
 from games import BabaIsYou
 import random
 from typing import Callable, List, Optional

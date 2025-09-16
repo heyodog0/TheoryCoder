@@ -1,7 +1,7 @@
 # babyai_env.py
 
-# import gymnasium as gym
-import gym
+import gymnasium as gym
+# import gym
 # from minigrid.wrappers import FullyObsWrapper
 # from babyai_lang_wrapper import MinigridTextObservationWrapper
 # from stateconvertutils import convert_minigrid_text_to_state

@@ -2,7 +2,7 @@ import os
 import importlib
 from typing import Callable, Any, Tuple, List
 
-from prompts import (
+from agent_modules.prompts import (
     initialize_world_model_prompt,
     revise_world_model_prompt,
     debug_model_prompt,

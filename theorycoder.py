@@ -17,7 +17,10 @@ import sys, os
 
 # make sure we don't accidentally load /home/z/procgen/worldmodel.py
 proj_root = os.path.abspath(os.path.dirname(__file__))
-sys.path = [proj_root] 
+sys.path.insert(0, proj_root)
+# Add RC_RL directory for VGDLEnv imports
+rc_rl_path = os.path.join(proj_root, 'RC_RL')
+sys.path.insert(0, rc_rl_path) 
 
 from agent_modules.io_manager import (
     capture_world_model,
