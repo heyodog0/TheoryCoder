@@ -342,7 +342,7 @@ class BasicGame(object):
     def buildLevel(self, lstr):
         from .ontology import stochastic_effects
         lines = [l for l in lstr.split("\n") if len(l)>0]
-        lengths = map(len, lines)
+        lengths = list(map(len, lines))
         assert min(lengths)==max(lengths), "Inconsistent line lengths."
         self.width = lengths[0]
         self.height = len(lines)
@@ -355,7 +355,7 @@ class BasicGame(object):
         self.screensize = (self.width*self.block_size, self.height*self.block_size)
 
         # set up resources
-        for res_type, (sclass, args, _) in self.sprite_constr.iteritems():
+        for res_type, (sclass, args, _) in self.sprite_constr.items():
             if issubclass(sclass, Resource):
                 if 'res_type' in args:
                     res_type = args['res_type']
@@ -399,7 +399,7 @@ class BasicGame(object):
         self.block_size = max(2,int(800./max(self.width, self.height)))
         self.screensize = (self.width*self.block_size, self.height*self.block_size)
 
-        for res_type, (sclass, args, _) in self.sprite_constr.iteritems():
+        for res_type, (sclass, args, _) in self.sprite_constr.items():
             if issubclass(sclass, Resource):
                 if 'res_type' in args:
                     res_type = args['res_type']
@@ -611,7 +611,7 @@ class BasicGame(object):
                 else:
                     ss[pos] = attrs
 
-                for a, val in s.__dict__.iteritems():
+                for a, val in s.__dict__.items():
                     if a not in ias:
                         attrs[a] = val
                 if s.resources:
@@ -628,17 +628,17 @@ class BasicGame(object):
         self.reset()
         self.score = fs['score']
         self.ended = fs['ended']
-        for key, ss in fs['objects'].iteritems():
+        for key, ss in fs['objects'].items():
             self.sprite_groups[key] = [] ## Added 4/31/17
-            for ID, attrs in ss.iteritems():
+            for ID, attrs in ss.items():
                 try:
                     p = attrs['x'], attrs['y']
                 except:
                     p = attrs[x], attrs[y]
                 s = self._createSprite_cheap(key, p)
-                for a, val in attrs.iteritems():
+                for a, val in attrs.items():
                     if a == 'resources':
-                        for r, v in val.iteritems():
+                        for r, v in val.items():
                             s.resources[r] = v
                     else:
                         s.__setattr__(a, val)
@@ -1633,7 +1633,7 @@ class Termination(object):
 
     def get_args(self):
         args = {}
-        for key, value in self.__dict__.iteritems():
+        for key, value in self.__dict__.items():
             if key != 'name':
                 args[key] = value
         if 'win' not in args:

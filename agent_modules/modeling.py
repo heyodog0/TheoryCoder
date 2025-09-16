@@ -26,7 +26,7 @@ class WorldModelManager:
         self.overwrite_world_model = overwrite_world_model
 
         # you could also pull your prompts in here
-        from prompts import (
+        from agent_modules.prompts import (
             initialize_world_model_prompt,
             revise_world_model_prompt,
             debug_model_prompt,

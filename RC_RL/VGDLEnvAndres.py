@@ -21,15 +21,19 @@ class VGDLEnvAndres(object):
 
         ###CONFIGS
         self.game_name = game_name
-        self.game_name_short = game_name[5:]
+        # Extract the base game name (remove .txt and _lvlX if present)
+        self.game_name_short = game_name.split('.txt')[0].split('_lvl')[0]
         self.level_switch = 'sequential'
         self.trial_num = 1003
         self.criteria = '1/1'
         self.timeout = 2000
-        games_folder = '../all_games'
+        # Find the correct path to all_games relative to current script location
+        import os
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        games_folder = os.path.join(current_dir, 'all_games')
 
         ##FOR RECORDING
-        self.record_flag = 1 #record_flag
+        self.record_flag = 0 #record_flag - disabled for now
         #pdb.set_trace()
         self.reward_histories_folder = '../reward_histories'
         self.object_interaction_histories_folder = '../object_interaction_histories'

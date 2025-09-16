@@ -76,7 +76,10 @@ class TheoryCoderAgent:
             self.llm_client = openai
         elif query_mode == "groq":
             from groq import Groq
-            self.llm_client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+            groq_api_key = os.environ.get("GROQ_API_KEY")
+            if not groq_api_key:
+                raise ValueError("GROQ_API_KEY environment variable is missing")
+            self.llm_client = Groq(api_key=groq_api_key)
         else:
             raise ValueError(f"Unsupported query_mode: {query_mode}")
 

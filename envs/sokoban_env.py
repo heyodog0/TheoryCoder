@@ -1,9 +1,9 @@
 from VGDLEnvAndres import VGDLEnvAndres
-from stateconvertutils import *
+from envs.stateconvertutils import *
 from copy import deepcopy
 
 class SokobanEnv:
-    def __init__(self, game_name="c2sokoban_lvl0.txt", level_set="sokoban", level_id=0, intended_steps=100000):
+    def __init__(self, game_name="sokoban_lvl0.txt", level_set="sokoban", level_id=0, intended_steps=100000):
         """
         Initialize the push boulders 1 environment wrapper.
 

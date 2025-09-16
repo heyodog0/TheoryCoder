@@ -22,7 +22,7 @@ class QueryClient:
         self.mode = mode
         self.model = model
         self.temperature = temperature
-        self.client = OpenAI()
+        self.client = None  # Initialize later based on mode
 
         if mode == "langchain_openai":
             # no persistent client needed; ChatOpenAI is lightweight
@@ -30,7 +30,9 @@ class QueryClient:
 
         elif mode == "openai":
             openai.api_key = os.getenv("OPENAI_API_KEY")
-            # nothing else to init
+            if not openai.api_key:
+                raise ValueError("OPENAI_API_KEY environment variable is missing")
+            self.client = OpenAI()
 
         elif mode == "groq":
             key = os.getenv(groq_api_key_env)
