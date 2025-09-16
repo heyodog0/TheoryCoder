@@ -23,6 +23,9 @@ def actor(domain_file, subplan, state, max_iterations=None, debug_callback=None,
     )
     if actions:
         return actions, new_state
+    else:
+        # Return empty plan if no actions found
+        return [], state
 
 class HierarchicalPlanner:
     """
@@ -65,10 +68,9 @@ class HierarchicalPlanner:
         Execute a single exploratory subplan.
         """
         # reload world model & planner dependencies
-        import worldmodel, agent_modules.planner as planner, levelrunner
+        import worldmodel, agent_modules.planner as planner
         importlib.reload(worldmodel)
         importlib.reload(planner)
-        importlib.reload(levelrunner)
 
         actions, _ = actor(
             self.domain_file,
@@ -92,11 +94,9 @@ class HierarchicalPlanner:
         actions = []
         # reload deps each iteration
         for i in range(self.max_replans):
-            import worldmodel, agent_modules.planner as planner, levelrunner
+            import worldmodel, agent_modules.planner as planner
             importlib.reload(worldmodel)
             importlib.reload(planner)
-            importlib.reload(levelrunner)
-            importlib.reload(utils)
 
             for subplan in plans.get(str(engine.level_id), []):
                 seq, state = actor(

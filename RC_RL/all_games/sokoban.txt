@@ -8,6 +8,7 @@ BasicGame key_handler=Pulse square_size=40
         0 > hole
         1 > box
         w > wall
+        A > avatar
     InteractionSet
         avatar wall > stepBack
         box avatar  > bounceForward

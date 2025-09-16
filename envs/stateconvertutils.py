@@ -151,6 +151,48 @@ def convert_pb1_state_colorized(env, previous_state=None):
     return state
 
 
+def convert_sokoban_state(env, previous_state=None):
+    """
+    Convert VGDL state to Sokoban-specific state format.
+    Returns a dictionary with avatar, box, wall, and hole positions.
+    """
+    try:
+        full_state = env.Env.current_env._game.getFullState()
+        objects = full_state['objects']
+        block_size = env.Env.current_env._game.block_size
+        env_height = env.Env.current_env._game.height
+
+        state = {}
+
+        # Process each object type
+        for obj_type, positions in objects.items():
+            if not positions:  # Skip empty object types
+                continue
+                
+            # Convert positions to coordinate format
+            coords = []
+            for pos_key, attributes in positions.items():
+                if isinstance(pos_key, tuple) and len(pos_key) == 2:
+                    x, y = pos_key
+                    # Convert from pixel coordinates to grid coordinates
+                    grid_x = x // block_size
+                    grid_y = y // block_size
+                    # Transform coordinates (VGDL uses different coordinate system)
+                    coord = transform_coordinates(grid_x, grid_y, env_height)
+                    coords.append(coord)
+            
+            if coords:
+                state[obj_type] = coords
+
+        return state
+        
+    except Exception as e:
+        print(f"Error in convert_sokoban_state: {e}")
+        # Return previous state if conversion fails
+        if previous_state:
+            return previous_state
+        return {}
+
 def convert_pb1_state(env, previous_state=None):
     """
     Converts the VGDL state into a dictionary with keys:

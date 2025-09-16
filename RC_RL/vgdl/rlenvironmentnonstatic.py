@@ -223,7 +223,8 @@ class RLEnvironmentNonStatic( StateObsHandlerNonStatic):
             self.setState(self._initstate)
 
         # if no avatar starting location is specified, the default one will be to place it randomly
-        self._game.randomizeAvatar()
+        # DISABLED: This was creating multiple avatars and causing blank canvas issues
+        # self._game.randomizeAvatar()
 
         self._game.kill_list = []
         if self.visualize:
@@ -689,8 +690,10 @@ def createRLInputGame(filename, obsType=OBSERVATION_GLOBAL):
 
 
 def createRLInputGameFromStrings(game, level):
-    return RLEnvironmentNonStatic(game, level, \
-            observationType = OBSERVATION_GLOBAL)
+    env = RLEnvironmentNonStatic(game, level, \
+            observationType = OBSERVATION_GLOBAL, visualize=True)
+    env.actionDelay = 2000  # 2 second delay between actions for stable visualization
+    return env
 
 
 def testMaze(numEpisodes, numJogOnSpot, verify, reuseGame, obsType):

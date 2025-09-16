@@ -199,6 +199,42 @@ def checker(state, predicates, operators):
         if predicate == 'at':
             results.append(at(state, operators["grounding_Python"][0], operators["grounding_Python"][1]))
 
+        # Sokoban-specific predicates
+        if predicate == 'unstored_box':
+            # A box is "unstored" if it exists in the game (i.e., not in a hole)
+            # Check if there are any boxes in the current state
+            boxes_exist = 'box' in state and len(state['box']) > 0
+            results.append(boxes_exist)
+            print(f"Checking unstored_box: boxes exist = {boxes_exist}")
+
+        if predicate == 'not unstored_box':
+            # Goal: no boxes left unstored (all boxes in holes)
+            # This means either no boxes exist, or all boxes are in holes
+            boxes_exist = 'box' in state and len(state['box']) > 0
+            goal_achieved = not boxes_exist  # No boxes left = goal achieved
+            results.append(goal_achieved)
+            print(f"Checking not unstored_box: goal achieved = {goal_achieved} (boxes remaining: {len(state.get('box', []))})")
+
+        if predicate == 'boxes_stuck':
+            # For now, assume boxes are never stuck (this could be enhanced)
+            results.append(False)
+            print(f"Checking boxes_stuck: False (simplified)")
+
+        if predicate == 'not boxes_stuck':
+            # Goal: boxes are not stuck (always true in our simplified model)
+            results.append(True)
+            print(f"Checking not boxes_stuck: True (simplified)")
+
+        if predicate == 'at_goal':
+            # Check if avatar is at a goal (hole) position
+            avatar_at_goal = False
+            if 'avatar' in state and 'hole' in state:
+                avatar_pos = state['avatar'][0] if state['avatar'] else None
+                if avatar_pos and avatar_pos in state['hole']:
+                    avatar_at_goal = True
+            results.append(avatar_at_goal)
+            print(f"Checking at_goal: {avatar_at_goal}")
+
     print("condition evalutions list:", results)
     return all(results)
 

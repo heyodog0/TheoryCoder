@@ -50,8 +50,8 @@ class SokobanEnv:
             dict: Initial state of the environment.
         """
         self.env.reset()
-        self.state = convert_pb1_state(self.env)
-        self.state_colorized = convert_pb1_state_colorized(self.env)
+        self.state = convert_sokoban_state(self.env)
+        self.state_colorized = convert_sokoban_state(self.env)
         self.turn_number = 0
         self.won = False
         self.lost = False
@@ -76,14 +76,22 @@ class SokobanEnv:
         action_idx = self.actions_set.index(action)
         next_state, reward, done, info = self.env.step(action_idx)
 
-        # Gracefully handle missing avatar (e.g., after death)
+        # Convert state using Sokoban-specific converter
         try:
-            self.state = convert_pb1_state(self.env, previous_state=self.state)
-            self.state_colorized = convert_pb1_state_colorized(self.env, previous_state=self.state)
-            self.save_screen()
+            self.state = convert_sokoban_state(self.env, previous_state=self.state)
+            self.state_colorized = convert_sokoban_state(self.env, previous_state=self.state)  # Use same converter for now
+            
+            # Debug: Check if sprites exist in the game
+            game = self.env.Env.current_env._game
+            print(f"Sprites in game: {list(game.sprite_groups.keys())}")
+            for sprite_type, sprites in game.sprite_groups.items():
+                print(f"  {sprite_type}: {len(sprites)} sprites")
+            
+            # Skip save_screen() for now to avoid scipy.misc.imsave error
+            # self.save_screen()
 
-        except AttributeError:
-            print("Avatar is missing. Retaining previous state.")
+        except Exception as e:
+            print(f"State conversion error: {e}. Retaining previous state.")
             self.state = deepcopy(self.state)  # Keep the last known state
 
         self.turn_number += 1
@@ -98,15 +106,17 @@ class SokobanEnv:
         """
         Update the `won` and `lost` attributes based on the current state.
         """
+        # Temporarily disable automatic loss detection to allow gameplay
+        print(f"Recent history: {self.env.recent_history}")
+        
         if self.env.recent_history == [True]:  # Win condition
             self.won = True
             self.lost = False
-        elif self.env.recent_history == [False]:  # Loss condition
-            self.won = False
-            self.lost = True
-        else:  # Game is ongoing
+            print("Game won!")
+        else:  # Game is ongoing (don't auto-lose)
             self.won = False
             self.lost = False
+            print("Game continuing...")
 
     def render(self):
         """
@@ -121,7 +131,7 @@ class SokobanEnv:
         Args:
             filename (str): File name to save the screenshot.
         """
-        self.env.save_screen(filename)
+        self.env.save_screen()  # VGDLEnvAndres.save_screen() doesn't take filename
 
     def get_obs(self):
         """

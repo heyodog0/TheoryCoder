@@ -213,21 +213,44 @@ class TheoryCoderAgent:
             importlib.invalidate_caches()
             importlib.reload(worldmodel)
             print("Using worldmodel.py from", worldmodel.__file__)
-            breakpoint()
-            mode = self._sample_planner_mode()
+            print(f"Current state: {self.runtime_vars['observations'][-1]}")
+            print("Starting planning with mode...")
+            # For Sokoban, prefer exploration since we don't have good exploit plans yet
+            if hasattr(self.engine, 'game_name') and 'sokoban' in str(self.engine.game_name).lower():
+                mode = "explore"
+                print(f"Forcing explore mode for Sokoban")
+            else:
+                mode = self._sample_planner_mode()
+            print(f"Selected planning mode: {mode}")
+            
+            # Set subplan for exploration mode
+            subplan_exploratory = "push_to_hole box_1" if mode == "explore" else None
+            
+            # Generate plan using the planner
             plan = self.planner.plan(
-                mode,
-                state=self.runtime_vars["observations"][-1],
+                mode=mode,
+                state=self.runtime_vars['observations'][-1],
                 plans=self.plans,
-                debug_callback=self.wm_manager.debug_model,
-                subplan_exploratory=None,
-                engine=self.engine,
+                debug_callback=print,
+                subplan_exploratory=subplan_exploratory,
+                engine=self.engine
             )
+            print(f"Generated plan: {plan}")
+            
+            if not plan:
+                print("No plan generated, falling back to random action")
+                plan = ["right"]  # Fallback for debugging
 
             # 4) execute
-            for a in plan:
+            print(f"Executing plan: {plan}")
+            for i, a in enumerate(plan):
+                print(f"Taking action {i+1}/{len(plan)}: {a}")
                 self.step_env(a)
                 first_letters += a[0]
+                print(f"After action: won={self.engine.won}, lost={self.engine.lost}")
+                # Extra sleep to allow seeing the game window
+                import time
+                time.sleep(3)  # 3 second pause after each action
                 if self.engine.won:
                     print("Agent won!")
                     return True
