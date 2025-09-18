@@ -1,0 +1,138 @@
+To address the prediction errors and improve the transition model, we need to make a couple of key updates:
+
+1. **Direction Rotation:** The error in agent direction when executing the 'left' action indicates that the current logic for rotating the agent's direction is incorrect. The rotation needs to be adjusted to correctly reflect counter-clockwise rotation.
+
+2. **Movement Logic:** Ensure that the forward movement logic accurately reflects changes in the agent's position based on its current direction and ensure it's not blocked by an entity.
+
+Here's the updated transition model:
+
+```Python
+# make sure to include these import statements
+from copy import deepcopy
+
+directions = {
+    'left': [-1, 0],
+    'right': [1, 0],
+    'up': [0, 1],
+    'down': [0, -1],
+}
+
+def transition_model(state, action):
+    new_state = deepcopy(state)
+    agent_pos = state['red_agent'][0]
+    agent_dir = state['agent_direction']
+    carrying = state['agent_carrying']
+    
+    # Calculate the position in front of the agent
+    front_pos = [agent_pos[0] + agent_dir[0], agent_pos[1] + agent_dir[1]]
+    
+    # Helper function to check if a position is blockable
+    def is_position_blocked(position):
+        # Check walls
+        if position in state.get('grey_wall', []):
+            return True
+        # Check if position is occupied by another entity
+        for key in state:
+            if key != 'red_agent' and key != 'agent_direction' and key != 'agent_carrying':
+                if position in state[key]:
+                    return True
+        return False
+
+    # Helper function to check if a position is adjacent to a door
+    def is_position_near_door(position):
+        for key in state:
+            if key.startswith('locked_') or key.startswith('closed_') or key.startswith('open_'):
+                for door_pos in state[key]:
+                    if abs(door_pos[0] - position[0]) <= 1 and abs(door_pos[1] - position[1]) <= 1:
+                        return True
+        return False
+
+    if action == 'forward':
+        # Move the agent forward if not blocked
+        if not is_position_blocked(front_pos):
+            new_state['red_agent'] = [front_pos]
+        return new_state
+
+    elif action == 'left':
+        # Correctly rotate the agent's direction to the left (counterclockwise)
+        if agent_dir == directions['left']:  # Facing left
+            new_state['agent_direction'] = directions['up']  # Face up
+        elif agent_dir == directions['right']:  # Facing right
+            new_state['agent_direction'] = directions['down']  # Face down
+        elif agent_dir == directions['up']:  # Facing up
+            new_state['agent_direction'] = directions['right']  # Face right
+        elif agent_dir == directions['down']:  # Facing down
+            new_state['agent_direction'] = directions['left']  # Face left
+        return new_state
+
+    elif action == 'right':
+        # Rotate the agent's direction to the right (clockwise)
+        if agent_dir == directions['left']:  # Facing left
+            new_state['agent_direction'] = directions['down']  # Face down
+        elif agent_dir == directions['right']:  # Facing right
+            new_state['agent_direction'] = directions['up']  # Face up
+        elif agent_dir == directions['up']:  # Facing up
+            new_state['agent_direction'] = directions['left']  # Face left
+        elif agent_dir == directions['down']:  # Facing down
+            new_state['agent_direction'] = directions['right']  # Face right
+        return new_state
+
+    elif action == 'pickup':
+        # Attempt to pick up an item if one exists at the front position
+        if not carrying:  # Can only pick up if not already carrying something
+            for entity in state.keys():
+                if entity.endswith('_box') or entity.endswith('_ball') or entity.endswith('_key'):
+                    if front_pos in state[entity]:
+                        new_state['agent_carrying'] = [entity]
+                        new_state[entity].remove(front_pos)
+                        break
+        return new_state
+
+    elif action == 'drop':
+        # Attempt to drop the carried item at the front position
+        if carrying:
+            item_to_drop = carrying[0]
+            item_type = item_to_drop.split('_')[-1]
+            if not is_position_blocked(front_pos) and not is_position_near_door(front_pos):
+                new_state['agent_carrying'] = []
+                if item_to_drop not in new_state:
+                    new_state[item_to_drop] = []
+                new_state[item_to_drop].append(front_pos)
+        return new_state
+
+    elif action == 'toggle':
+        # Toggle boxes and doors
+        for entity in state.keys():
+            if entity.endswith('_box') and front_pos in state[entity]:
+                color = entity.split('_')[0]
+                locked_door_key = f'locked_{color}_door'
+                corresponding_key = f'{color}_key'
+                
+                # Check for locked door and absence of key
+                if locked_door_key in state and corresponding_key not in state:
+                    new_state[corresponding_key] = [front_pos]
+                    new_state[entity].remove(front_pos)
+                break
+            elif entity.startswith('locked_') and front_pos in state[entity]:
+                color = entity.split('_')[1]
+                key_name = f'{color}_key'
+                if key_name in carrying:
+                    open_door_key = f'open_{color}_door'
+                    if open_door_key not in new_state:
+                        new_state[open_door_key] = []
+                    new_state[open_door_key].append(front_pos)
+                    new_state[entity].remove(front_pos)
+                break
+            elif entity.startswith('closed_') and front_pos in state[entity]:
+                open_door_key = entity.replace('closed_', 'open_')
+                if open_door_key not in new_state:
+                    new_state[open_door_key] = []
+                new_state[open_door_key].append(front_pos)
+                new_state[entity].remove(front_pos)
+                break
+        return new_state
+
+    return state
+```
+
+This code should correctly handle the agent's direction changes and ensure that blocking and adjacency rules are respected. The direction rotation logic has been updated to accurately reflect the intended movements. Additionally, the movement logic for the forward action already correctly handled the agent's movement, as no errors were reported related to this, indicating it was functioning as expected.

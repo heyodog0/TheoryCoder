@@ -22,6 +22,7 @@ def actor(domain_file, subplan, state, max_iterations=None, debug_callback=None,
         debug_callback=debug_callback, level=level,
     )
     if actions:
+        # Return plain (actions, new_state). Higher-level helpers will wrap when needed.
         return actions, new_state
 
 

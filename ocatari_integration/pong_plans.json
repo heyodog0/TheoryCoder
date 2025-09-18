@@ -1,0 +1,17 @@
+{
+  "0": [
+    "track_ball player_paddle ball",
+    "move_to_intercept player_paddle ball",
+    "hit_ball player_paddle ball"
+  ],
+  "1": [
+    "track_ball player_paddle ball",
+    "defensive_positioning player_paddle ball",
+    "hit_ball player_paddle ball"
+  ],
+  "default": [
+    "track_ball player_paddle ball",
+    "move_paddle_optimal player_paddle ball",
+    "score_point player_paddle"
+  ]
+}

@@ -1,16 +1,8 @@
 {
-    "0": ["move_to red_agent red_ball"],
-    "1": ["move_to red_agent yellow_key"],
-    "2": ["move_to red_agent yellow_key"],
-    "3": ["open green_door"],
-    "4": ["open purple_door","pickup red_box"],
-    "5": ["open purple_door"],
-    "6": ["pickup red_key","unlock red_door red_key","drop red_key","pickup red_box"],
-    "7": ["pickup yellow_key","put_next_to yellow_key yellow_box"],
-    "8": ["pickup grey_box","put_next_to grey_box blue_box","pickup grey_key","put_next_to grey_key green_box"],
-    "9": ["open yellow_door","open green_door","pickup red_key","unlock red_door red_key"],
-    "10": ["pickup red_key","unlock red_door red_key"],
-    "11": ["unblock red_door red_ball red_key","pickup red_key","unlock red_door red_key","drop red_key","pickup red_box"],
-    "12": ["pickup blue_key","put_next_to blue_key red_ball"],
-    "13": ["open blue_door"]
+  "0": [
+    "noop",
+    "fire", 
+    "right",
+    "left"
+  ]
 }

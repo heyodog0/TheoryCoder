@@ -1,0 +1,9 @@
+
+Level: babyai_0
+Status: failed
+Attempts: 0
+Revisions: 0
+Debugs: 0
+Explorations: 0
+Solution: fffffff
+        

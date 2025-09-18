@@ -59,15 +59,22 @@ def enumerative_search(state0, operator, preconditions, effects, strategy='bfs',
 
     actions_set = ["left", "right", "forward", "pickup", "drop", "toggle", "done"]
 
+    # First check if preconditions are already satisfied
+    if checker(state0, preconditions, operator):
+        print("Preconditions already satisfied, checking if effects are met")
+        if checker(state0, effects, operator):
+            print("Effects already satisfied, goal reached immediately")
+            return ["no-op"], state0
+
     start = ()
     states = {start: deepcopy(state0)}
     queue = deque([start])
     visited = set()
     search_iters = 0    
-    # breakpoint()
+    no_progress_count = 0
+    last_queue_size = len(queue)
 
     while queue:
-        # breakpoint()
         search_iters += 1
         if strategy == 'bfs':
             node = queue.popleft()
@@ -81,31 +88,46 @@ def enumerative_search(state0, operator, preconditions, effects, strategy='bfs',
 
         visited.add(current_state_hashable)
 
+        # Check if effects (goals) are satisfied
         if checker(states[node], effects, operator):
-            break
+            print('Goal reached')
+            return list(node), states[node]
 
+        # Termination conditions
         if search_iters > max_iters:
             print('MAX DEPTH REACHED')
-            # breakpoint()
+            return ["no-op"], states[node]
+            
+        # Check for no progress (queue not growing)
+        if len(queue) == last_queue_size:
+            no_progress_count += 1
+        else:
+            no_progress_count = 0
+        last_queue_size = len(queue)
+        
+        # If we haven't made progress for a while and queue is small, likely stuck
+        if no_progress_count > 100 and len(queue) < 10:
+            print('No progress being made, likely unreachable goal')
             return ["no-op"], states[node]
 
         for a in actions_set:
             try:
-                # breakpoint()
                 states[node] = update_entity_categorizations(states[node])
-                # breakpoint()
                 state = transition_model(deepcopy(states[node]), a)
                 state = update_entity_categorizations(state)
                 
+                # Only add states that are different and not already visited
                 if state and state != states[node]:
-                    new_node = node + (a,)
-                    states[new_node] = deepcopy(state)
-                    queue.append(new_node)
+                    state_hashable = convert_state_to_hashable(state)
+                    if state_hashable not in visited:
+                        new_node = node + (a,)
+                        states[new_node] = deepcopy(state)
+                        queue.append(new_node)
 
-                    if checker(state, effects, operator):
-                        print('Goal reached')
-                        # breakpoint()
-                        return list(new_node), state
+                        # Check if this new state satisfies the goal
+                        if checker(state, effects, operator):
+                            print('Goal reached')
+                            return list(new_node), state
 
             except Exception as e:  # Catch all exceptions
                 print(f"Exception encountered: {e}. Triggering model debug.")
@@ -113,5 +135,6 @@ def enumerative_search(state0, operator, preconditions, effects, strategy='bfs',
                     debug_callback(states[node], a)  # Call the debug function with state and action
                 else:
                     raise e  # Re-raise if no debug callback is provided
-    # breakpoint()
-    return list(node), states[node]
+    
+    print('Search exhausted, goal not reachable')
+    return ["no-op"], states.get((), state0)

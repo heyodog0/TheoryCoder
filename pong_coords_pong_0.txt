@@ -1,0 +1,2089 @@
+# Pong Object Coordinates - Level pong-0
+# Format: frame_number,image_file,object_type,x,y,width,height,center_x,center_y
+
+# Frame 0, Action: fire, Step: 0
+0,frame_000000.png,player_paddle,142,103,10,30,142,103
+0,frame_000000.png,score_left,42,11,8,8,42,11
+0,frame_000000.png,score_right,122,11,8,8,122,11
+# Frame 1, Action: fire, Step: 1
+1,frame_000001.png,player_paddle,142,103,10,30,142,103
+1,frame_000001.png,score_left,42,11,8,8,42,11
+1,frame_000001.png,score_right,122,11,8,8,122,11
+# Frame 2, Action: fire, Step: 2
+2,frame_000002.png,player_paddle,142,103,10,30,142,103
+2,frame_000002.png,score_left,42,11,8,8,42,11
+2,frame_000002.png,score_right,122,11,8,8,122,11
+# Frame 3, Action: fire, Step: 3
+3,frame_000003.png,player_paddle,142,103,10,30,142,103
+3,frame_000003.png,score_left,42,11,8,8,42,11
+3,frame_000003.png,score_right,122,11,8,8,122,11
+# Frame 4, Action: fire, Step: 4
+4,frame_000004.png,player_paddle,142,103,10,30,142,103
+4,frame_000004.png,score_left,42,11,8,8,42,11
+4,frame_000004.png,score_right,122,11,8,8,122,11
+# Frame 5, Action: fire, Step: 5
+5,frame_000005.png,player_paddle,142,103,10,30,142,103
+5,frame_000005.png,score_left,42,11,8,8,42,11
+5,frame_000005.png,score_right,122,11,8,8,122,11
+# Frame 6, Action: fire, Step: 6
+6,frame_000006.png,player_paddle,142,103,10,30,142,103
+6,frame_000006.png,score_left,42,11,8,8,42,11
+6,frame_000006.png,score_right,122,11,8,8,122,11
+# Frame 7, Action: fire, Step: 7
+7,frame_000007.png,player_paddle,142,103,10,30,142,103
+7,frame_000007.png,score_left,42,11,8,8,42,11
+7,frame_000007.png,score_right,122,11,8,8,122,11
+# Frame 8, Action: fire, Step: 8
+8,frame_000008.png,player_paddle,142,103,10,30,142,103
+8,frame_000008.png,score_left,42,11,8,8,42,11
+8,frame_000008.png,score_right,122,11,8,8,122,11
+# Frame 9, Action: fire, Step: 9
+9,frame_000009.png,player_paddle,142,103,10,30,142,103
+9,frame_000009.png,score_left,42,11,8,8,42,11
+9,frame_000009.png,score_right,122,11,8,8,122,11
+# Frame 10, Action: fire, Step: 10
+10,frame_000010.png,player_paddle,142,103,10,30,142,103
+10,frame_000010.png,score_left,42,11,8,8,42,11
+10,frame_000010.png,score_right,122,11,8,8,122,11
+# Frame 11, Action: fire, Step: 11
+11,frame_000011.png,player_paddle,142,103,10,30,142,103
+11,frame_000011.png,score_left,42,11,8,8,42,11
+11,frame_000011.png,score_right,122,11,8,8,122,11
+# Frame 12, Action: fire, Step: 12
+12,frame_000012.png,player_paddle,142,103,10,30,142,103
+12,frame_000012.png,score_left,42,11,8,8,42,11
+12,frame_000012.png,score_right,122,11,8,8,122,11
+# Frame 13, Action: fire, Step: 13
+13,frame_000013.png,player_paddle,142,103,10,30,142,103
+13,frame_000013.png,score_left,42,11,8,8,42,11
+13,frame_000013.png,score_right,122,11,8,8,122,11
+# Frame 14, Action: fire, Step: 14
+14,frame_000014.png,player_paddle,142,103,10,30,142,103
+14,frame_000014.png,score_left,42,11,8,8,42,11
+14,frame_000014.png,score_right,122,11,8,8,122,11
+# Frame 15, Action: fire, Step: 15
+15,frame_000015.png,player_paddle,142,103,10,30,142,103
+15,frame_000015.png,score_left,42,11,8,8,42,11
+15,frame_000015.png,score_right,122,11,8,8,122,11
+# Frame 16, Action: fire, Step: 16
+16,frame_000016.png,player_paddle,142,103,10,30,142,103
+16,frame_000016.png,score_left,42,11,8,8,42,11
+16,frame_000016.png,score_right,122,11,8,8,122,11
+# Frame 17, Action: fire, Step: 17
+17,frame_000017.png,player_paddle,142,103,10,30,142,103
+17,frame_000017.png,score_left,42,11,8,8,42,11
+17,frame_000017.png,score_right,122,11,8,8,122,11
+# Frame 18, Action: fire, Step: 18
+18,frame_000018.png,player_paddle,142,103,10,30,142,103
+18,frame_000018.png,score_left,42,11,8,8,42,11
+18,frame_000018.png,score_right,122,11,8,8,122,11
+# Frame 19, Action: fire, Step: 19
+19,frame_000019.png,player_paddle,142,103,10,30,142,103
+19,frame_000019.png,enemy_paddle,18,124,10,30,18,124
+19,frame_000019.png,ball,77,119,4,4,77,119
+19,frame_000019.png,score_left,42,11,8,8,42,11
+19,frame_000019.png,score_right,122,11,8,8,122,11
+# Frame 20, Action: noop, Step: 20
+20,frame_000020.png,player_paddle,142,103,10,30,142,103
+20,frame_000020.png,enemy_paddle,18,126,10,30,18,126
+20,frame_000020.png,ball,75,121,4,4,75,121
+20,frame_000020.png,score_left,42,11,8,8,42,11
+20,frame_000020.png,score_right,122,11,8,8,122,11
+# Frame 21, Action: noop, Step: 21
+21,frame_000021.png,player_paddle,142,103,10,30,142,103
+21,frame_000021.png,enemy_paddle,18,128,10,30,18,128
+21,frame_000021.png,ball,73,123,4,4,73,123
+21,frame_000021.png,score_left,42,11,8,8,42,11
+21,frame_000021.png,score_right,122,11,8,8,122,11
+# Frame 22, Action: noop, Step: 22
+22,frame_000022.png,player_paddle,142,103,10,30,142,103
+22,frame_000022.png,enemy_paddle,18,132,10,30,18,132
+22,frame_000022.png,ball,69,127,4,4,69,127
+22,frame_000022.png,score_left,42,11,8,8,42,11
+22,frame_000022.png,score_right,122,11,8,8,122,11
+# Frame 23, Action: noop, Step: 23
+23,frame_000023.png,player_paddle,142,103,10,30,142,103
+23,frame_000023.png,enemy_paddle,18,134,10,30,18,134
+23,frame_000023.png,ball,67,129,4,4,67,129
+23,frame_000023.png,score_left,42,11,8,8,42,11
+23,frame_000023.png,score_right,122,11,8,8,122,11
+# Frame 24, Action: fire, Step: 0
+24,frame_000024.png,player_paddle,142,103,10,30,142,103
+24,frame_000024.png,score_left,42,11,8,8,42,11
+24,frame_000024.png,score_right,122,11,8,8,122,11
+# Frame 25, Action: fire, Step: 1
+25,frame_000025.png,player_paddle,142,103,10,30,142,103
+25,frame_000025.png,score_left,42,11,8,8,42,11
+25,frame_000025.png,score_right,122,11,8,8,122,11
+# Frame 26, Action: fire, Step: 2
+26,frame_000026.png,player_paddle,142,103,10,30,142,103
+26,frame_000026.png,score_left,42,11,8,8,42,11
+26,frame_000026.png,score_right,122,11,8,8,122,11
+# Frame 27, Action: fire, Step: 3
+27,frame_000027.png,player_paddle,142,103,10,30,142,103
+27,frame_000027.png,score_left,42,11,8,8,42,11
+27,frame_000027.png,score_right,122,11,8,8,122,11
+# Frame 28, Action: fire, Step: 4
+28,frame_000028.png,player_paddle,142,103,10,30,142,103
+28,frame_000028.png,score_left,42,11,8,8,42,11
+28,frame_000028.png,score_right,122,11,8,8,122,11
+# Frame 29, Action: fire, Step: 5
+29,frame_000029.png,player_paddle,142,103,10,30,142,103
+29,frame_000029.png,score_left,42,11,8,8,42,11
+29,frame_000029.png,score_right,122,11,8,8,122,11
+# Frame 30, Action: fire, Step: 6
+30,frame_000030.png,player_paddle,142,103,10,30,142,103
+30,frame_000030.png,score_left,42,11,8,8,42,11
+30,frame_000030.png,score_right,122,11,8,8,122,11
+# Frame 31, Action: fire, Step: 7
+31,frame_000031.png,player_paddle,142,103,10,30,142,103
+31,frame_000031.png,score_left,42,11,8,8,42,11
+31,frame_000031.png,score_right,122,11,8,8,122,11
+# Frame 32, Action: fire, Step: 8
+32,frame_000032.png,player_paddle,142,103,10,30,142,103
+32,frame_000032.png,score_left,42,11,8,8,42,11
+32,frame_000032.png,score_right,122,11,8,8,122,11
+# Frame 33, Action: fire, Step: 9
+33,frame_000033.png,player_paddle,142,103,10,30,142,103
+33,frame_000033.png,score_left,42,11,8,8,42,11
+33,frame_000033.png,score_right,122,11,8,8,122,11
+# Frame 34, Action: fire, Step: 10
+34,frame_000034.png,player_paddle,142,103,10,30,142,103
+34,frame_000034.png,score_left,42,11,8,8,42,11
+34,frame_000034.png,score_right,122,11,8,8,122,11
+# Frame 35, Action: fire, Step: 11
+35,frame_000035.png,player_paddle,142,103,10,30,142,103
+35,frame_000035.png,score_left,42,11,8,8,42,11
+35,frame_000035.png,score_right,122,11,8,8,122,11
+# Frame 36, Action: fire, Step: 12
+36,frame_000036.png,player_paddle,142,103,10,30,142,103
+36,frame_000036.png,score_left,42,11,8,8,42,11
+36,frame_000036.png,score_right,122,11,8,8,122,11
+# Frame 37, Action: fire, Step: 13
+37,frame_000037.png,player_paddle,142,103,10,30,142,103
+37,frame_000037.png,score_left,42,11,8,8,42,11
+37,frame_000037.png,score_right,122,11,8,8,122,11
+# Frame 38, Action: fire, Step: 14
+38,frame_000038.png,player_paddle,142,103,10,30,142,103
+38,frame_000038.png,score_left,42,11,8,8,42,11
+38,frame_000038.png,score_right,122,11,8,8,122,11
+# Frame 39, Action: fire, Step: 15
+39,frame_000039.png,player_paddle,142,103,10,30,142,103
+39,frame_000039.png,score_left,42,11,8,8,42,11
+39,frame_000039.png,score_right,122,11,8,8,122,11
+# Frame 40, Action: fire, Step: 16
+40,frame_000040.png,player_paddle,142,103,10,30,142,103
+40,frame_000040.png,score_left,42,11,8,8,42,11
+40,frame_000040.png,score_right,122,11,8,8,122,11
+# Frame 41, Action: fire, Step: 17
+41,frame_000041.png,player_paddle,142,103,10,30,142,103
+41,frame_000041.png,enemy_paddle,18,122,10,30,18,122
+41,frame_000041.png,ball,78,118,4,4,78,118
+41,frame_000041.png,score_left,42,11,8,8,42,11
+41,frame_000041.png,score_right,122,11,8,8,122,11
+# Frame 42, Action: fire, Step: 0
+42,frame_000042.png,player_paddle,142,103,10,30,142,103
+42,frame_000042.png,score_left,42,11,8,8,42,11
+42,frame_000042.png,score_right,122,11,8,8,122,11
+# Frame 43, Action: fire, Step: 1
+43,frame_000043.png,player_paddle,142,103,10,30,142,103
+43,frame_000043.png,score_left,42,11,8,8,42,11
+43,frame_000043.png,score_right,122,11,8,8,122,11
+# Frame 44, Action: fire, Step: 2
+44,frame_000044.png,player_paddle,142,103,10,30,142,103
+44,frame_000044.png,score_left,42,11,8,8,42,11
+44,frame_000044.png,score_right,122,11,8,8,122,11
+# Frame 45, Action: fire, Step: 3
+45,frame_000045.png,player_paddle,142,103,10,30,142,103
+45,frame_000045.png,score_left,42,11,8,8,42,11
+45,frame_000045.png,score_right,122,11,8,8,122,11
+# Frame 46, Action: fire, Step: 4
+46,frame_000046.png,player_paddle,142,103,10,30,142,103
+46,frame_000046.png,score_left,42,11,8,8,42,11
+46,frame_000046.png,score_right,122,11,8,8,122,11
+# Frame 47, Action: fire, Step: 5
+47,frame_000047.png,player_paddle,142,103,10,30,142,103
+47,frame_000047.png,score_left,42,11,8,8,42,11
+47,frame_000047.png,score_right,122,11,8,8,122,11
+# Frame 48, Action: fire, Step: 6
+48,frame_000048.png,player_paddle,142,103,10,30,142,103
+48,frame_000048.png,score_left,42,11,8,8,42,11
+48,frame_000048.png,score_right,122,11,8,8,122,11
+# Frame 49, Action: fire, Step: 7
+49,frame_000049.png,player_paddle,142,103,10,30,142,103
+49,frame_000049.png,score_left,42,11,8,8,42,11
+49,frame_000049.png,score_right,122,11,8,8,122,11
+# Frame 50, Action: fire, Step: 8
+50,frame_000050.png,player_paddle,142,103,10,30,142,103
+50,frame_000050.png,score_left,42,11,8,8,42,11
+50,frame_000050.png,score_right,122,11,8,8,122,11
+# Frame 51, Action: fire, Step: 9
+51,frame_000051.png,player_paddle,142,103,10,30,142,103
+51,frame_000051.png,score_left,42,11,8,8,42,11
+51,frame_000051.png,score_right,122,11,8,8,122,11
+# Frame 52, Action: fire, Step: 10
+52,frame_000052.png,player_paddle,142,103,10,30,142,103
+52,frame_000052.png,score_left,42,11,8,8,42,11
+52,frame_000052.png,score_right,122,11,8,8,122,11
+# Frame 53, Action: fire, Step: 11
+53,frame_000053.png,player_paddle,142,103,10,30,142,103
+53,frame_000053.png,score_left,42,11,8,8,42,11
+53,frame_000053.png,score_right,122,11,8,8,122,11
+# Frame 54, Action: fire, Step: 12
+54,frame_000054.png,player_paddle,142,103,10,30,142,103
+54,frame_000054.png,score_left,42,11,8,8,42,11
+54,frame_000054.png,score_right,122,11,8,8,122,11
+# Frame 55, Action: fire, Step: 13
+55,frame_000055.png,player_paddle,142,103,10,30,142,103
+55,frame_000055.png,score_left,42,11,8,8,42,11
+55,frame_000055.png,score_right,122,11,8,8,122,11
+# Frame 56, Action: fire, Step: 14
+56,frame_000056.png,player_paddle,142,103,10,30,142,103
+56,frame_000056.png,score_left,42,11,8,8,42,11
+56,frame_000056.png,score_right,122,11,8,8,122,11
+# Frame 57, Action: fire, Step: 15
+57,frame_000057.png,player_paddle,142,103,10,30,142,103
+57,frame_000057.png,score_left,42,11,8,8,42,11
+57,frame_000057.png,score_right,122,11,8,8,122,11
+# Frame 58, Action: fire, Step: 16
+58,frame_000058.png,player_paddle,142,103,10,30,142,103
+58,frame_000058.png,score_left,42,11,8,8,42,11
+58,frame_000058.png,score_right,122,11,8,8,122,11
+# Frame 59, Action: fire, Step: 17
+59,frame_000059.png,player_paddle,142,103,10,30,142,103
+59,frame_000059.png,score_left,42,11,8,8,42,11
+59,frame_000059.png,score_right,122,11,8,8,122,11
+# Frame 60, Action: fire, Step: 18
+60,frame_000060.png,player_paddle,142,103,10,30,142,103
+60,frame_000060.png,score_left,42,11,8,8,42,11
+60,frame_000060.png,score_right,122,11,8,8,122,11
+# Frame 61, Action: fire, Step: 19
+61,frame_000061.png,player_paddle,142,103,10,30,142,103
+61,frame_000061.png,enemy_paddle,18,122,10,30,18,122
+61,frame_000061.png,ball,78,118,4,4,78,118
+61,frame_000061.png,score_left,42,11,8,8,42,11
+61,frame_000061.png,score_right,122,11,8,8,122,11
+# Frame 62, Action: fire, Step: 0
+62,frame_000062.png,player_paddle,142,103,10,30,142,103
+62,frame_000062.png,score_left,42,11,8,8,42,11
+62,frame_000062.png,score_right,122,11,8,8,122,11
+# Frame 63, Action: fire, Step: 1
+63,frame_000063.png,player_paddle,142,103,10,30,142,103
+63,frame_000063.png,score_left,42,11,8,8,42,11
+63,frame_000063.png,score_right,122,11,8,8,122,11
+# Frame 64, Action: fire, Step: 2
+64,frame_000064.png,player_paddle,142,103,10,30,142,103
+64,frame_000064.png,score_left,42,11,8,8,42,11
+64,frame_000064.png,score_right,122,11,8,8,122,11
+# Frame 65, Action: fire, Step: 3
+65,frame_000065.png,player_paddle,142,103,10,30,142,103
+65,frame_000065.png,score_left,42,11,8,8,42,11
+65,frame_000065.png,score_right,122,11,8,8,122,11
+# Frame 66, Action: fire, Step: 4
+66,frame_000066.png,player_paddle,142,103,10,30,142,103
+66,frame_000066.png,score_left,42,11,8,8,42,11
+66,frame_000066.png,score_right,122,11,8,8,122,11
+# Frame 67, Action: fire, Step: 5
+67,frame_000067.png,player_paddle,142,103,10,30,142,103
+67,frame_000067.png,score_left,42,11,8,8,42,11
+67,frame_000067.png,score_right,122,11,8,8,122,11
+# Frame 68, Action: fire, Step: 6
+68,frame_000068.png,player_paddle,142,103,10,30,142,103
+68,frame_000068.png,score_left,42,11,8,8,42,11
+68,frame_000068.png,score_right,122,11,8,8,122,11
+# Frame 69, Action: fire, Step: 7
+69,frame_000069.png,player_paddle,142,103,10,30,142,103
+69,frame_000069.png,score_left,42,11,8,8,42,11
+69,frame_000069.png,score_right,122,11,8,8,122,11
+# Frame 70, Action: fire, Step: 8
+70,frame_000070.png,player_paddle,142,103,10,30,142,103
+70,frame_000070.png,score_left,42,11,8,8,42,11
+70,frame_000070.png,score_right,122,11,8,8,122,11
+# Frame 71, Action: fire, Step: 9
+71,frame_000071.png,player_paddle,142,103,10,30,142,103
+71,frame_000071.png,score_left,42,11,8,8,42,11
+71,frame_000071.png,score_right,122,11,8,8,122,11
+# Frame 72, Action: fire, Step: 10
+72,frame_000072.png,player_paddle,142,103,10,30,142,103
+72,frame_000072.png,score_left,42,11,8,8,42,11
+72,frame_000072.png,score_right,122,11,8,8,122,11
+# Frame 73, Action: fire, Step: 11
+73,frame_000073.png,player_paddle,142,103,10,30,142,103
+73,frame_000073.png,score_left,42,11,8,8,42,11
+73,frame_000073.png,score_right,122,11,8,8,122,11
+# Frame 74, Action: fire, Step: 12
+74,frame_000074.png,player_paddle,142,103,10,30,142,103
+74,frame_000074.png,score_left,42,11,8,8,42,11
+74,frame_000074.png,score_right,122,11,8,8,122,11
+# Frame 75, Action: fire, Step: 13
+75,frame_000075.png,player_paddle,142,103,10,30,142,103
+75,frame_000075.png,score_left,42,11,8,8,42,11
+75,frame_000075.png,score_right,122,11,8,8,122,11
+# Frame 76, Action: fire, Step: 14
+76,frame_000076.png,player_paddle,142,103,10,30,142,103
+76,frame_000076.png,score_left,42,11,8,8,42,11
+76,frame_000076.png,score_right,122,11,8,8,122,11
+# Frame 77, Action: fire, Step: 15
+77,frame_000077.png,player_paddle,142,103,10,30,142,103
+77,frame_000077.png,score_left,42,11,8,8,42,11
+77,frame_000077.png,score_right,122,11,8,8,122,11
+# Frame 78, Action: fire, Step: 16
+78,frame_000078.png,player_paddle,142,103,10,30,142,103
+78,frame_000078.png,score_left,42,11,8,8,42,11
+78,frame_000078.png,score_right,122,11,8,8,122,11
+# Frame 79, Action: fire, Step: 17
+79,frame_000079.png,player_paddle,142,103,10,30,142,103
+79,frame_000079.png,score_left,42,11,8,8,42,11
+79,frame_000079.png,score_right,122,11,8,8,122,11
+# Frame 80, Action: fire, Step: 18
+80,frame_000080.png,player_paddle,142,103,10,30,142,103
+80,frame_000080.png,score_left,42,11,8,8,42,11
+80,frame_000080.png,score_right,122,11,8,8,122,11
+# Frame 81, Action: fire, Step: 19
+81,frame_000081.png,player_paddle,142,103,10,30,142,103
+81,frame_000081.png,score_left,42,11,8,8,42,11
+81,frame_000081.png,score_right,122,11,8,8,122,11
+# Frame 82, Action: fire, Step: 20
+82,frame_000082.png,player_paddle,142,103,10,30,142,103
+82,frame_000082.png,enemy_paddle,18,124,10,30,18,124
+82,frame_000082.png,ball,77,119,4,4,77,119
+82,frame_000082.png,score_left,42,11,8,8,42,11
+82,frame_000082.png,score_right,122,11,8,8,122,11
+# Frame 83, Action: fire, Step: 0
+83,frame_000083.png,player_paddle,142,103,10,30,142,103
+83,frame_000083.png,score_left,42,11,8,8,42,11
+83,frame_000083.png,score_right,122,11,8,8,122,11
+# Frame 84, Action: fire, Step: 1
+84,frame_000084.png,player_paddle,142,103,10,30,142,103
+84,frame_000084.png,score_left,42,11,8,8,42,11
+84,frame_000084.png,score_right,122,11,8,8,122,11
+# Frame 85, Action: fire, Step: 2
+85,frame_000085.png,player_paddle,142,103,10,30,142,103
+85,frame_000085.png,score_left,42,11,8,8,42,11
+85,frame_000085.png,score_right,122,11,8,8,122,11
+# Frame 86, Action: fire, Step: 3
+86,frame_000086.png,player_paddle,142,103,10,30,142,103
+86,frame_000086.png,score_left,42,11,8,8,42,11
+86,frame_000086.png,score_right,122,11,8,8,122,11
+# Frame 87, Action: fire, Step: 4
+87,frame_000087.png,player_paddle,142,103,10,30,142,103
+87,frame_000087.png,score_left,42,11,8,8,42,11
+87,frame_000087.png,score_right,122,11,8,8,122,11
+# Frame 88, Action: fire, Step: 5
+88,frame_000088.png,player_paddle,142,103,10,30,142,103
+88,frame_000088.png,score_left,42,11,8,8,42,11
+88,frame_000088.png,score_right,122,11,8,8,122,11
+# Frame 89, Action: fire, Step: 6
+89,frame_000089.png,player_paddle,142,103,10,30,142,103
+89,frame_000089.png,score_left,42,11,8,8,42,11
+89,frame_000089.png,score_right,122,11,8,8,122,11
+# Frame 90, Action: fire, Step: 7
+90,frame_000090.png,player_paddle,142,103,10,30,142,103
+90,frame_000090.png,score_left,42,11,8,8,42,11
+90,frame_000090.png,score_right,122,11,8,8,122,11
+# Frame 91, Action: fire, Step: 8
+91,frame_000091.png,player_paddle,142,103,10,30,142,103
+91,frame_000091.png,score_left,42,11,8,8,42,11
+91,frame_000091.png,score_right,122,11,8,8,122,11
+# Frame 92, Action: fire, Step: 9
+92,frame_000092.png,player_paddle,142,103,10,30,142,103
+92,frame_000092.png,score_left,42,11,8,8,42,11
+92,frame_000092.png,score_right,122,11,8,8,122,11
+# Frame 93, Action: fire, Step: 10
+93,frame_000093.png,player_paddle,142,103,10,30,142,103
+93,frame_000093.png,score_left,42,11,8,8,42,11
+93,frame_000093.png,score_right,122,11,8,8,122,11
+# Frame 94, Action: fire, Step: 11
+94,frame_000094.png,player_paddle,142,103,10,30,142,103
+94,frame_000094.png,score_left,42,11,8,8,42,11
+94,frame_000094.png,score_right,122,11,8,8,122,11
+# Frame 95, Action: fire, Step: 12
+95,frame_000095.png,player_paddle,142,103,10,30,142,103
+95,frame_000095.png,score_left,42,11,8,8,42,11
+95,frame_000095.png,score_right,122,11,8,8,122,11
+# Frame 96, Action: fire, Step: 13
+96,frame_000096.png,player_paddle,142,103,10,30,142,103
+96,frame_000096.png,score_left,42,11,8,8,42,11
+96,frame_000096.png,score_right,122,11,8,8,122,11
+# Frame 97, Action: fire, Step: 14
+97,frame_000097.png,player_paddle,142,103,10,30,142,103
+97,frame_000097.png,score_left,42,11,8,8,42,11
+97,frame_000097.png,score_right,122,11,8,8,122,11
+# Frame 98, Action: fire, Step: 15
+98,frame_000098.png,player_paddle,142,103,10,30,142,103
+98,frame_000098.png,score_left,42,11,8,8,42,11
+98,frame_000098.png,score_right,122,11,8,8,122,11
+# Frame 99, Action: fire, Step: 16
+99,frame_000099.png,player_paddle,142,103,10,30,142,103
+99,frame_000099.png,score_left,42,11,8,8,42,11
+99,frame_000099.png,score_right,122,11,8,8,122,11
+# Frame 100, Action: fire, Step: 17
+100,frame_000100.png,player_paddle,142,103,10,30,142,103
+100,frame_000100.png,score_left,42,11,8,8,42,11
+100,frame_000100.png,score_right,122,11,8,8,122,11
+# Frame 101, Action: fire, Step: 18
+101,frame_000101.png,player_paddle,142,103,10,30,142,103
+101,frame_000101.png,enemy_paddle,18,122,10,30,18,122
+101,frame_000101.png,ball,79,117,4,4,79,117
+101,frame_000101.png,score_left,42,11,8,8,42,11
+101,frame_000101.png,score_right,122,11,8,8,122,11
+# Frame 102, Action: fire, Step: 0
+102,frame_000102.png,player_paddle,142,103,10,30,142,103
+102,frame_000102.png,score_left,42,11,8,8,42,11
+102,frame_000102.png,score_right,122,11,8,8,122,11
+# Frame 103, Action: fire, Step: 1
+103,frame_000103.png,player_paddle,142,103,10,30,142,103
+103,frame_000103.png,score_left,42,11,8,8,42,11
+103,frame_000103.png,score_right,122,11,8,8,122,11
+# Frame 104, Action: fire, Step: 2
+104,frame_000104.png,player_paddle,142,103,10,30,142,103
+104,frame_000104.png,score_left,42,11,8,8,42,11
+104,frame_000104.png,score_right,122,11,8,8,122,11
+# Frame 105, Action: fire, Step: 3
+105,frame_000105.png,player_paddle,142,103,10,30,142,103
+105,frame_000105.png,score_left,42,11,8,8,42,11
+105,frame_000105.png,score_right,122,11,8,8,122,11
+# Frame 106, Action: fire, Step: 4
+106,frame_000106.png,player_paddle,142,103,10,30,142,103
+106,frame_000106.png,score_left,42,11,8,8,42,11
+106,frame_000106.png,score_right,122,11,8,8,122,11
+# Frame 107, Action: fire, Step: 5
+107,frame_000107.png,player_paddle,142,103,10,30,142,103
+107,frame_000107.png,score_left,42,11,8,8,42,11
+107,frame_000107.png,score_right,122,11,8,8,122,11
+# Frame 108, Action: fire, Step: 6
+108,frame_000108.png,player_paddle,142,103,10,30,142,103
+108,frame_000108.png,score_left,42,11,8,8,42,11
+108,frame_000108.png,score_right,122,11,8,8,122,11
+# Frame 109, Action: fire, Step: 7
+109,frame_000109.png,player_paddle,142,103,10,30,142,103
+109,frame_000109.png,score_left,42,11,8,8,42,11
+109,frame_000109.png,score_right,122,11,8,8,122,11
+# Frame 110, Action: fire, Step: 8
+110,frame_000110.png,player_paddle,142,103,10,30,142,103
+110,frame_000110.png,score_left,42,11,8,8,42,11
+110,frame_000110.png,score_right,122,11,8,8,122,11
+# Frame 111, Action: fire, Step: 9
+111,frame_000111.png,player_paddle,142,103,10,30,142,103
+111,frame_000111.png,score_left,42,11,8,8,42,11
+111,frame_000111.png,score_right,122,11,8,8,122,11
+# Frame 112, Action: fire, Step: 10
+112,frame_000112.png,player_paddle,142,103,10,30,142,103
+112,frame_000112.png,score_left,42,11,8,8,42,11
+112,frame_000112.png,score_right,122,11,8,8,122,11
+# Frame 113, Action: fire, Step: 11
+113,frame_000113.png,player_paddle,142,103,10,30,142,103
+113,frame_000113.png,score_left,42,11,8,8,42,11
+113,frame_000113.png,score_right,122,11,8,8,122,11
+# Frame 114, Action: fire, Step: 12
+114,frame_000114.png,player_paddle,142,103,10,30,142,103
+114,frame_000114.png,score_left,42,11,8,8,42,11
+114,frame_000114.png,score_right,122,11,8,8,122,11
+# Frame 115, Action: fire, Step: 13
+115,frame_000115.png,player_paddle,142,103,10,30,142,103
+115,frame_000115.png,score_left,42,11,8,8,42,11
+115,frame_000115.png,score_right,122,11,8,8,122,11
+# Frame 116, Action: fire, Step: 14
+116,frame_000116.png,player_paddle,142,103,10,30,142,103
+116,frame_000116.png,score_left,42,11,8,8,42,11
+116,frame_000116.png,score_right,122,11,8,8,122,11
+# Frame 117, Action: fire, Step: 15
+117,frame_000117.png,player_paddle,142,103,10,30,142,103
+117,frame_000117.png,score_left,42,11,8,8,42,11
+117,frame_000117.png,score_right,122,11,8,8,122,11
+# Frame 118, Action: fire, Step: 16
+118,frame_000118.png,player_paddle,142,103,10,30,142,103
+118,frame_000118.png,score_left,42,11,8,8,42,11
+118,frame_000118.png,score_right,122,11,8,8,122,11
+# Frame 119, Action: fire, Step: 17
+119,frame_000119.png,player_paddle,142,103,10,30,142,103
+119,frame_000119.png,score_left,42,11,8,8,42,11
+119,frame_000119.png,score_right,122,11,8,8,122,11
+# Frame 120, Action: fire, Step: 18
+120,frame_000120.png,player_paddle,142,103,10,30,142,103
+120,frame_000120.png,score_left,42,11,8,8,42,11
+120,frame_000120.png,score_right,122,11,8,8,122,11
+# Frame 121, Action: fire, Step: 19
+121,frame_000121.png,player_paddle,142,103,10,30,142,103
+121,frame_000121.png,score_left,42,11,8,8,42,11
+121,frame_000121.png,score_right,122,11,8,8,122,11
+# Frame 122, Action: fire, Step: 20
+122,frame_000122.png,player_paddle,142,103,10,30,142,103
+122,frame_000122.png,enemy_paddle,18,124,10,30,18,124
+122,frame_000122.png,ball,77,119,4,4,77,119
+122,frame_000122.png,score_left,42,11,8,8,42,11
+122,frame_000122.png,score_right,122,11,8,8,122,11
+# Frame 123, Action: fire, Step: 0
+123,frame_000123.png,player_paddle,142,103,10,30,142,103
+123,frame_000123.png,score_left,42,11,8,8,42,11
+123,frame_000123.png,score_right,122,11,8,8,122,11
+# Frame 124, Action: fire, Step: 1
+124,frame_000124.png,player_paddle,142,103,10,30,142,103
+124,frame_000124.png,score_left,42,11,8,8,42,11
+124,frame_000124.png,score_right,122,11,8,8,122,11
+# Frame 125, Action: fire, Step: 2
+125,frame_000125.png,player_paddle,142,103,10,30,142,103
+125,frame_000125.png,score_left,42,11,8,8,42,11
+125,frame_000125.png,score_right,122,11,8,8,122,11
+# Frame 126, Action: fire, Step: 3
+126,frame_000126.png,player_paddle,142,103,10,30,142,103
+126,frame_000126.png,score_left,42,11,8,8,42,11
+126,frame_000126.png,score_right,122,11,8,8,122,11
+# Frame 127, Action: fire, Step: 4
+127,frame_000127.png,player_paddle,142,103,10,30,142,103
+127,frame_000127.png,score_left,42,11,8,8,42,11
+127,frame_000127.png,score_right,122,11,8,8,122,11
+# Frame 128, Action: fire, Step: 5
+128,frame_000128.png,player_paddle,142,103,10,30,142,103
+128,frame_000128.png,score_left,42,11,8,8,42,11
+128,frame_000128.png,score_right,122,11,8,8,122,11
+# Frame 129, Action: fire, Step: 6
+129,frame_000129.png,player_paddle,142,103,10,30,142,103
+129,frame_000129.png,score_left,42,11,8,8,42,11
+129,frame_000129.png,score_right,122,11,8,8,122,11
+# Frame 130, Action: fire, Step: 7
+130,frame_000130.png,player_paddle,142,103,10,30,142,103
+130,frame_000130.png,score_left,42,11,8,8,42,11
+130,frame_000130.png,score_right,122,11,8,8,122,11
+# Frame 131, Action: fire, Step: 8
+131,frame_000131.png,player_paddle,142,103,10,30,142,103
+131,frame_000131.png,score_left,42,11,8,8,42,11
+131,frame_000131.png,score_right,122,11,8,8,122,11
+# Frame 132, Action: fire, Step: 9
+132,frame_000132.png,player_paddle,142,103,10,30,142,103
+132,frame_000132.png,score_left,42,11,8,8,42,11
+132,frame_000132.png,score_right,122,11,8,8,122,11
+# Frame 133, Action: fire, Step: 10
+133,frame_000133.png,player_paddle,142,103,10,30,142,103
+133,frame_000133.png,score_left,42,11,8,8,42,11
+133,frame_000133.png,score_right,122,11,8,8,122,11
+# Frame 134, Action: fire, Step: 11
+134,frame_000134.png,player_paddle,142,103,10,30,142,103
+134,frame_000134.png,score_left,42,11,8,8,42,11
+134,frame_000134.png,score_right,122,11,8,8,122,11
+# Frame 135, Action: fire, Step: 12
+135,frame_000135.png,player_paddle,142,103,10,30,142,103
+135,frame_000135.png,score_left,42,11,8,8,42,11
+135,frame_000135.png,score_right,122,11,8,8,122,11
+# Frame 136, Action: fire, Step: 13
+136,frame_000136.png,player_paddle,142,103,10,30,142,103
+136,frame_000136.png,score_left,42,11,8,8,42,11
+136,frame_000136.png,score_right,122,11,8,8,122,11
+# Frame 137, Action: fire, Step: 14
+137,frame_000137.png,player_paddle,142,103,10,30,142,103
+137,frame_000137.png,score_left,42,11,8,8,42,11
+137,frame_000137.png,score_right,122,11,8,8,122,11
+# Frame 138, Action: fire, Step: 15
+138,frame_000138.png,player_paddle,142,103,10,30,142,103
+138,frame_000138.png,score_left,42,11,8,8,42,11
+138,frame_000138.png,score_right,122,11,8,8,122,11
+# Frame 139, Action: fire, Step: 16
+139,frame_000139.png,player_paddle,142,103,10,30,142,103
+139,frame_000139.png,score_left,42,11,8,8,42,11
+139,frame_000139.png,score_right,122,11,8,8,122,11
+# Frame 140, Action: fire, Step: 17
+140,frame_000140.png,player_paddle,142,103,10,30,142,103
+140,frame_000140.png,score_left,42,11,8,8,42,11
+140,frame_000140.png,score_right,122,11,8,8,122,11
+# Frame 141, Action: fire, Step: 18
+141,frame_000141.png,player_paddle,142,103,10,30,142,103
+141,frame_000141.png,score_left,42,11,8,8,42,11
+141,frame_000141.png,score_right,122,11,8,8,122,11
+# Frame 142, Action: fire, Step: 19
+142,frame_000142.png,player_paddle,142,103,10,30,142,103
+142,frame_000142.png,enemy_paddle,18,122,10,30,18,122
+142,frame_000142.png,ball,78,118,4,4,78,118
+142,frame_000142.png,score_left,42,11,8,8,42,11
+142,frame_000142.png,score_right,122,11,8,8,122,11
+# Frame 143, Action: noop, Step: 20
+143,frame_000143.png,player_paddle,142,103,10,30,142,103
+143,frame_000143.png,enemy_paddle,18,126,10,30,18,126
+143,frame_000143.png,ball,74,122,4,4,74,122
+143,frame_000143.png,score_left,42,11,8,8,42,11
+143,frame_000143.png,score_right,122,11,8,8,122,11
+# Frame 144, Action: fire, Step: 0
+144,frame_000144.png,player_paddle,142,103,10,30,142,103
+144,frame_000144.png,score_left,42,11,8,8,42,11
+144,frame_000144.png,score_right,122,11,8,8,122,11
+# Frame 145, Action: fire, Step: 1
+145,frame_000145.png,player_paddle,142,103,10,30,142,103
+145,frame_000145.png,score_left,42,11,8,8,42,11
+145,frame_000145.png,score_right,122,11,8,8,122,11
+# Frame 146, Action: fire, Step: 2
+146,frame_000146.png,player_paddle,142,103,10,30,142,103
+146,frame_000146.png,score_left,42,11,8,8,42,11
+146,frame_000146.png,score_right,122,11,8,8,122,11
+# Frame 147, Action: fire, Step: 3
+147,frame_000147.png,player_paddle,142,103,10,30,142,103
+147,frame_000147.png,score_left,42,11,8,8,42,11
+147,frame_000147.png,score_right,122,11,8,8,122,11
+# Frame 148, Action: fire, Step: 4
+148,frame_000148.png,player_paddle,142,103,10,30,142,103
+148,frame_000148.png,score_left,42,11,8,8,42,11
+148,frame_000148.png,score_right,122,11,8,8,122,11
+# Frame 149, Action: fire, Step: 5
+149,frame_000149.png,player_paddle,142,103,10,30,142,103
+149,frame_000149.png,score_left,42,11,8,8,42,11
+149,frame_000149.png,score_right,122,11,8,8,122,11
+# Frame 150, Action: fire, Step: 6
+150,frame_000150.png,player_paddle,142,103,10,30,142,103
+150,frame_000150.png,score_left,42,11,8,8,42,11
+150,frame_000150.png,score_right,122,11,8,8,122,11
+# Frame 151, Action: fire, Step: 7
+151,frame_000151.png,player_paddle,142,103,10,30,142,103
+151,frame_000151.png,score_left,42,11,8,8,42,11
+151,frame_000151.png,score_right,122,11,8,8,122,11
+# Frame 152, Action: fire, Step: 8
+152,frame_000152.png,player_paddle,142,103,10,30,142,103
+152,frame_000152.png,score_left,42,11,8,8,42,11
+152,frame_000152.png,score_right,122,11,8,8,122,11
+# Frame 153, Action: fire, Step: 9
+153,frame_000153.png,player_paddle,142,103,10,30,142,103
+153,frame_000153.png,score_left,42,11,8,8,42,11
+153,frame_000153.png,score_right,122,11,8,8,122,11
+# Frame 154, Action: fire, Step: 10
+154,frame_000154.png,player_paddle,142,103,10,30,142,103
+154,frame_000154.png,score_left,42,11,8,8,42,11
+154,frame_000154.png,score_right,122,11,8,8,122,11
+# Frame 155, Action: fire, Step: 11
+155,frame_000155.png,player_paddle,142,103,10,30,142,103
+155,frame_000155.png,score_left,42,11,8,8,42,11
+155,frame_000155.png,score_right,122,11,8,8,122,11
+# Frame 156, Action: fire, Step: 12
+156,frame_000156.png,player_paddle,142,103,10,30,142,103
+156,frame_000156.png,score_left,42,11,8,8,42,11
+156,frame_000156.png,score_right,122,11,8,8,122,11
+# Frame 157, Action: fire, Step: 13
+157,frame_000157.png,player_paddle,142,103,10,30,142,103
+157,frame_000157.png,score_left,42,11,8,8,42,11
+157,frame_000157.png,score_right,122,11,8,8,122,11
+# Frame 158, Action: fire, Step: 14
+158,frame_000158.png,player_paddle,142,103,10,30,142,103
+158,frame_000158.png,score_left,42,11,8,8,42,11
+158,frame_000158.png,score_right,122,11,8,8,122,11
+# Frame 159, Action: fire, Step: 15
+159,frame_000159.png,player_paddle,142,103,10,30,142,103
+159,frame_000159.png,score_left,42,11,8,8,42,11
+159,frame_000159.png,score_right,122,11,8,8,122,11
+# Frame 160, Action: fire, Step: 16
+160,frame_000160.png,player_paddle,142,103,10,30,142,103
+160,frame_000160.png,score_left,42,11,8,8,42,11
+160,frame_000160.png,score_right,122,11,8,8,122,11
+# Frame 161, Action: fire, Step: 17
+161,frame_000161.png,player_paddle,142,103,10,30,142,103
+161,frame_000161.png,score_left,42,11,8,8,42,11
+161,frame_000161.png,score_right,122,11,8,8,122,11
+# Frame 162, Action: fire, Step: 18
+162,frame_000162.png,player_paddle,142,103,10,30,142,103
+162,frame_000162.png,score_left,42,11,8,8,42,11
+162,frame_000162.png,score_right,122,11,8,8,122,11
+# Frame 163, Action: fire, Step: 19
+163,frame_000163.png,player_paddle,142,103,10,30,142,103
+163,frame_000163.png,enemy_paddle,18,124,10,30,18,124
+163,frame_000163.png,ball,77,119,4,4,77,119
+163,frame_000163.png,score_left,42,11,8,8,42,11
+163,frame_000163.png,score_right,122,11,8,8,122,11
+# Frame 164, Action: noop, Step: 20
+164,frame_000164.png,player_paddle,142,103,10,30,142,103
+164,frame_000164.png,enemy_paddle,18,128,10,30,18,128
+164,frame_000164.png,ball,73,123,4,4,73,123
+164,frame_000164.png,score_left,42,11,8,8,42,11
+164,frame_000164.png,score_right,122,11,8,8,122,11
+# Frame 165, Action: noop, Step: 21
+165,frame_000165.png,player_paddle,142,103,10,30,142,103
+165,frame_000165.png,enemy_paddle,18,132,10,30,18,132
+165,frame_000165.png,ball,69,127,4,4,69,127
+165,frame_000165.png,score_left,42,11,8,8,42,11
+165,frame_000165.png,score_right,122,11,8,8,122,11
+# Frame 166, Action: noop, Step: 22
+166,frame_000166.png,player_paddle,142,103,10,30,142,103
+166,frame_000166.png,enemy_paddle,18,134,10,30,18,134
+166,frame_000166.png,ball,66,130,4,4,66,130
+166,frame_000166.png,score_left,42,11,8,8,42,11
+166,frame_000166.png,score_right,122,11,8,8,122,11
+# Frame 167, Action: noop, Step: 23
+167,frame_000167.png,player_paddle,142,103,10,30,142,103
+167,frame_000167.png,enemy_paddle,18,138,10,30,18,138
+167,frame_000167.png,ball,63,133,4,4,63,133
+167,frame_000167.png,score_left,42,11,8,8,42,11
+167,frame_000167.png,score_right,122,11,8,8,122,11
+# Frame 168, Action: fire, Step: 0
+168,frame_000168.png,player_paddle,142,103,10,30,142,103
+168,frame_000168.png,score_left,42,11,8,8,42,11
+168,frame_000168.png,score_right,122,11,8,8,122,11
+# Frame 169, Action: fire, Step: 1
+169,frame_000169.png,player_paddle,142,103,10,30,142,103
+169,frame_000169.png,score_left,42,11,8,8,42,11
+169,frame_000169.png,score_right,122,11,8,8,122,11
+# Frame 170, Action: fire, Step: 2
+170,frame_000170.png,player_paddle,142,103,10,30,142,103
+170,frame_000170.png,score_left,42,11,8,8,42,11
+170,frame_000170.png,score_right,122,11,8,8,122,11
+# Frame 171, Action: fire, Step: 3
+171,frame_000171.png,player_paddle,142,103,10,30,142,103
+171,frame_000171.png,score_left,42,11,8,8,42,11
+171,frame_000171.png,score_right,122,11,8,8,122,11
+# Frame 172, Action: fire, Step: 4
+172,frame_000172.png,player_paddle,142,103,10,30,142,103
+172,frame_000172.png,score_left,42,11,8,8,42,11
+172,frame_000172.png,score_right,122,11,8,8,122,11
+# Frame 173, Action: fire, Step: 5
+173,frame_000173.png,player_paddle,142,103,10,30,142,103
+173,frame_000173.png,score_left,42,11,8,8,42,11
+173,frame_000173.png,score_right,122,11,8,8,122,11
+# Frame 174, Action: fire, Step: 6
+174,frame_000174.png,player_paddle,142,103,10,30,142,103
+174,frame_000174.png,score_left,42,11,8,8,42,11
+174,frame_000174.png,score_right,122,11,8,8,122,11
+# Frame 175, Action: fire, Step: 7
+175,frame_000175.png,player_paddle,142,103,10,30,142,103
+175,frame_000175.png,score_left,42,11,8,8,42,11
+175,frame_000175.png,score_right,122,11,8,8,122,11
+# Frame 176, Action: fire, Step: 8
+176,frame_000176.png,player_paddle,142,103,10,30,142,103
+176,frame_000176.png,score_left,42,11,8,8,42,11
+176,frame_000176.png,score_right,122,11,8,8,122,11
+# Frame 177, Action: fire, Step: 9
+177,frame_000177.png,player_paddle,142,103,10,30,142,103
+177,frame_000177.png,score_left,42,11,8,8,42,11
+177,frame_000177.png,score_right,122,11,8,8,122,11
+# Frame 178, Action: fire, Step: 10
+178,frame_000178.png,player_paddle,142,103,10,30,142,103
+178,frame_000178.png,score_left,42,11,8,8,42,11
+178,frame_000178.png,score_right,122,11,8,8,122,11
+# Frame 179, Action: fire, Step: 11
+179,frame_000179.png,player_paddle,142,103,10,30,142,103
+179,frame_000179.png,score_left,42,11,8,8,42,11
+179,frame_000179.png,score_right,122,11,8,8,122,11
+# Frame 180, Action: fire, Step: 12
+180,frame_000180.png,player_paddle,142,103,10,30,142,103
+180,frame_000180.png,score_left,42,11,8,8,42,11
+180,frame_000180.png,score_right,122,11,8,8,122,11
+# Frame 181, Action: fire, Step: 13
+181,frame_000181.png,player_paddle,142,103,10,30,142,103
+181,frame_000181.png,score_left,42,11,8,8,42,11
+181,frame_000181.png,score_right,122,11,8,8,122,11
+# Frame 182, Action: fire, Step: 14
+182,frame_000182.png,player_paddle,142,103,10,30,142,103
+182,frame_000182.png,score_left,42,11,8,8,42,11
+182,frame_000182.png,score_right,122,11,8,8,122,11
+# Frame 183, Action: fire, Step: 15
+183,frame_000183.png,player_paddle,142,103,10,30,142,103
+183,frame_000183.png,score_left,42,11,8,8,42,11
+183,frame_000183.png,score_right,122,11,8,8,122,11
+# Frame 184, Action: fire, Step: 16
+184,frame_000184.png,player_paddle,142,103,10,30,142,103
+184,frame_000184.png,score_left,42,11,8,8,42,11
+184,frame_000184.png,score_right,122,11,8,8,122,11
+# Frame 185, Action: fire, Step: 17
+185,frame_000185.png,player_paddle,142,103,10,30,142,103
+185,frame_000185.png,score_left,42,11,8,8,42,11
+185,frame_000185.png,score_right,122,11,8,8,122,11
+# Frame 186, Action: fire, Step: 18
+186,frame_000186.png,player_paddle,142,103,10,30,142,103
+186,frame_000186.png,score_left,42,11,8,8,42,11
+186,frame_000186.png,score_right,122,11,8,8,122,11
+# Frame 187, Action: fire, Step: 19
+187,frame_000187.png,player_paddle,142,103,10,30,142,103
+187,frame_000187.png,enemy_paddle,18,122,10,30,18,122
+187,frame_000187.png,ball,79,117,4,4,79,117
+187,frame_000187.png,score_left,42,11,8,8,42,11
+187,frame_000187.png,score_right,122,11,8,8,122,11
+# Frame 188, Action: noop, Step: 20
+188,frame_000188.png,player_paddle,142,103,10,30,142,103
+188,frame_000188.png,enemy_paddle,18,126,10,30,18,126
+188,frame_000188.png,ball,75,121,4,4,75,121
+188,frame_000188.png,score_left,42,11,8,8,42,11
+188,frame_000188.png,score_right,122,11,8,8,122,11
+# Frame 189, Action: noop, Step: 21
+189,frame_000189.png,player_paddle,142,103,10,30,142,103
+189,frame_000189.png,enemy_paddle,18,128,10,30,18,128
+189,frame_000189.png,ball,73,123,4,4,73,123
+189,frame_000189.png,score_left,42,11,8,8,42,11
+189,frame_000189.png,score_right,122,11,8,8,122,11
+# Frame 190, Action: noop, Step: 22
+190,frame_000190.png,player_paddle,142,103,10,30,142,103
+190,frame_000190.png,enemy_paddle,18,132,10,30,18,132
+190,frame_000190.png,ball,69,127,4,4,69,127
+190,frame_000190.png,score_left,42,11,8,8,42,11
+190,frame_000190.png,score_right,122,11,8,8,122,11
+# Frame 191, Action: noop, Step: 23
+191,frame_000191.png,player_paddle,142,103,10,30,142,103
+191,frame_000191.png,enemy_paddle,18,134,10,30,18,134
+191,frame_000191.png,ball,66,130,4,4,66,130
+191,frame_000191.png,score_left,42,11,8,8,42,11
+191,frame_000191.png,score_right,122,11,8,8,122,11
+# Frame 192, Action: fire, Step: 0
+192,frame_000192.png,player_paddle,142,103,10,30,142,103
+192,frame_000192.png,score_left,42,11,8,8,42,11
+192,frame_000192.png,score_right,122,11,8,8,122,11
+# Frame 193, Action: fire, Step: 1
+193,frame_000193.png,player_paddle,142,103,10,30,142,103
+193,frame_000193.png,score_left,42,11,8,8,42,11
+193,frame_000193.png,score_right,122,11,8,8,122,11
+# Frame 194, Action: fire, Step: 2
+194,frame_000194.png,player_paddle,142,103,10,30,142,103
+194,frame_000194.png,score_left,42,11,8,8,42,11
+194,frame_000194.png,score_right,122,11,8,8,122,11
+# Frame 195, Action: fire, Step: 3
+195,frame_000195.png,player_paddle,142,103,10,30,142,103
+195,frame_000195.png,score_left,42,11,8,8,42,11
+195,frame_000195.png,score_right,122,11,8,8,122,11
+# Frame 196, Action: fire, Step: 4
+196,frame_000196.png,player_paddle,142,103,10,30,142,103
+196,frame_000196.png,score_left,42,11,8,8,42,11
+196,frame_000196.png,score_right,122,11,8,8,122,11
+# Frame 197, Action: fire, Step: 5
+197,frame_000197.png,player_paddle,142,103,10,30,142,103
+197,frame_000197.png,score_left,42,11,8,8,42,11
+197,frame_000197.png,score_right,122,11,8,8,122,11
+# Frame 198, Action: fire, Step: 6
+198,frame_000198.png,player_paddle,142,103,10,30,142,103
+198,frame_000198.png,score_left,42,11,8,8,42,11
+198,frame_000198.png,score_right,122,11,8,8,122,11
+# Frame 199, Action: fire, Step: 7
+199,frame_000199.png,player_paddle,142,103,10,30,142,103
+199,frame_000199.png,score_left,42,11,8,8,42,11
+199,frame_000199.png,score_right,122,11,8,8,122,11
+# Frame 200, Action: fire, Step: 8
+200,frame_000200.png,player_paddle,142,103,10,30,142,103
+200,frame_000200.png,score_left,42,11,8,8,42,11
+200,frame_000200.png,score_right,122,11,8,8,122,11
+# Frame 201, Action: fire, Step: 9
+201,frame_000201.png,player_paddle,142,103,10,30,142,103
+201,frame_000201.png,score_left,42,11,8,8,42,11
+201,frame_000201.png,score_right,122,11,8,8,122,11
+# Frame 202, Action: fire, Step: 10
+202,frame_000202.png,player_paddle,142,103,10,30,142,103
+202,frame_000202.png,score_left,42,11,8,8,42,11
+202,frame_000202.png,score_right,122,11,8,8,122,11
+# Frame 203, Action: fire, Step: 11
+203,frame_000203.png,player_paddle,142,103,10,30,142,103
+203,frame_000203.png,score_left,42,11,8,8,42,11
+203,frame_000203.png,score_right,122,11,8,8,122,11
+# Frame 204, Action: fire, Step: 12
+204,frame_000204.png,player_paddle,142,103,10,30,142,103
+204,frame_000204.png,score_left,42,11,8,8,42,11
+204,frame_000204.png,score_right,122,11,8,8,122,11
+# Frame 205, Action: fire, Step: 13
+205,frame_000205.png,player_paddle,142,103,10,30,142,103
+205,frame_000205.png,score_left,42,11,8,8,42,11
+205,frame_000205.png,score_right,122,11,8,8,122,11
+# Frame 206, Action: fire, Step: 14
+206,frame_000206.png,player_paddle,142,103,10,30,142,103
+206,frame_000206.png,score_left,42,11,8,8,42,11
+206,frame_000206.png,score_right,122,11,8,8,122,11
+# Frame 207, Action: fire, Step: 15
+207,frame_000207.png,player_paddle,142,103,10,30,142,103
+207,frame_000207.png,score_left,42,11,8,8,42,11
+207,frame_000207.png,score_right,122,11,8,8,122,11
+# Frame 208, Action: fire, Step: 16
+208,frame_000208.png,player_paddle,142,103,10,30,142,103
+208,frame_000208.png,score_left,42,11,8,8,42,11
+208,frame_000208.png,score_right,122,11,8,8,122,11
+# Frame 209, Action: fire, Step: 17
+209,frame_000209.png,player_paddle,142,103,10,30,142,103
+209,frame_000209.png,score_left,42,11,8,8,42,11
+209,frame_000209.png,score_right,122,11,8,8,122,11
+# Frame 210, Action: fire, Step: 18
+210,frame_000210.png,player_paddle,142,103,10,30,142,103
+210,frame_000210.png,enemy_paddle,18,122,10,30,18,122
+210,frame_000210.png,ball,78,118,4,4,78,118
+210,frame_000210.png,score_left,42,11,8,8,42,11
+210,frame_000210.png,score_right,122,11,8,8,122,11
+# Frame 211, Action: fire, Step: 0
+211,frame_000211.png,player_paddle,142,103,10,30,142,103
+211,frame_000211.png,score_left,42,11,8,8,42,11
+211,frame_000211.png,score_right,122,11,8,8,122,11
+# Frame 212, Action: fire, Step: 1
+212,frame_000212.png,player_paddle,142,103,10,30,142,103
+212,frame_000212.png,score_left,42,11,8,8,42,11
+212,frame_000212.png,score_right,122,11,8,8,122,11
+# Frame 213, Action: fire, Step: 2
+213,frame_000213.png,player_paddle,142,103,10,30,142,103
+213,frame_000213.png,score_left,42,11,8,8,42,11
+213,frame_000213.png,score_right,122,11,8,8,122,11
+# Frame 214, Action: fire, Step: 3
+214,frame_000214.png,player_paddle,142,103,10,30,142,103
+214,frame_000214.png,score_left,42,11,8,8,42,11
+214,frame_000214.png,score_right,122,11,8,8,122,11
+# Frame 215, Action: fire, Step: 4
+215,frame_000215.png,player_paddle,142,103,10,30,142,103
+215,frame_000215.png,score_left,42,11,8,8,42,11
+215,frame_000215.png,score_right,122,11,8,8,122,11
+# Frame 216, Action: fire, Step: 5
+216,frame_000216.png,player_paddle,142,103,10,30,142,103
+216,frame_000216.png,score_left,42,11,8,8,42,11
+216,frame_000216.png,score_right,122,11,8,8,122,11
+# Frame 217, Action: fire, Step: 6
+217,frame_000217.png,player_paddle,142,103,10,30,142,103
+217,frame_000217.png,score_left,42,11,8,8,42,11
+217,frame_000217.png,score_right,122,11,8,8,122,11
+# Frame 218, Action: fire, Step: 7
+218,frame_000218.png,player_paddle,142,103,10,30,142,103
+218,frame_000218.png,score_left,42,11,8,8,42,11
+218,frame_000218.png,score_right,122,11,8,8,122,11
+# Frame 219, Action: fire, Step: 8
+219,frame_000219.png,player_paddle,142,103,10,30,142,103
+219,frame_000219.png,score_left,42,11,8,8,42,11
+219,frame_000219.png,score_right,122,11,8,8,122,11
+# Frame 220, Action: fire, Step: 9
+220,frame_000220.png,player_paddle,142,103,10,30,142,103
+220,frame_000220.png,score_left,42,11,8,8,42,11
+220,frame_000220.png,score_right,122,11,8,8,122,11
+# Frame 221, Action: fire, Step: 10
+221,frame_000221.png,player_paddle,142,103,10,30,142,103
+221,frame_000221.png,score_left,42,11,8,8,42,11
+221,frame_000221.png,score_right,122,11,8,8,122,11
+# Frame 222, Action: fire, Step: 11
+222,frame_000222.png,player_paddle,142,103,10,30,142,103
+222,frame_000222.png,score_left,42,11,8,8,42,11
+222,frame_000222.png,score_right,122,11,8,8,122,11
+# Frame 223, Action: fire, Step: 12
+223,frame_000223.png,player_paddle,142,103,10,30,142,103
+223,frame_000223.png,score_left,42,11,8,8,42,11
+223,frame_000223.png,score_right,122,11,8,8,122,11
+# Frame 224, Action: fire, Step: 13
+224,frame_000224.png,player_paddle,142,103,10,30,142,103
+224,frame_000224.png,score_left,42,11,8,8,42,11
+224,frame_000224.png,score_right,122,11,8,8,122,11
+# Frame 225, Action: fire, Step: 14
+225,frame_000225.png,player_paddle,142,103,10,30,142,103
+225,frame_000225.png,score_left,42,11,8,8,42,11
+225,frame_000225.png,score_right,122,11,8,8,122,11
+# Frame 226, Action: fire, Step: 15
+226,frame_000226.png,player_paddle,142,103,10,30,142,103
+226,frame_000226.png,score_left,42,11,8,8,42,11
+226,frame_000226.png,score_right,122,11,8,8,122,11
+# Frame 227, Action: fire, Step: 16
+227,frame_000227.png,player_paddle,142,103,10,30,142,103
+227,frame_000227.png,score_left,42,11,8,8,42,11
+227,frame_000227.png,score_right,122,11,8,8,122,11
+# Frame 228, Action: fire, Step: 17
+228,frame_000228.png,player_paddle,142,103,10,30,142,103
+228,frame_000228.png,score_left,42,11,8,8,42,11
+228,frame_000228.png,score_right,122,11,8,8,122,11
+# Frame 229, Action: fire, Step: 18
+229,frame_000229.png,player_paddle,142,103,10,30,142,103
+229,frame_000229.png,enemy_paddle,18,122,10,30,18,122
+229,frame_000229.png,ball,78,118,4,4,78,118
+229,frame_000229.png,score_left,42,11,8,8,42,11
+229,frame_000229.png,score_right,122,11,8,8,122,11
+# Frame 230, Action: fire, Step: 0
+230,frame_000230.png,player_paddle,142,103,10,30,142,103
+230,frame_000230.png,score_left,42,11,8,8,42,11
+230,frame_000230.png,score_right,122,11,8,8,122,11
+# Frame 231, Action: fire, Step: 1
+231,frame_000231.png,player_paddle,142,103,10,30,142,103
+231,frame_000231.png,score_left,42,11,8,8,42,11
+231,frame_000231.png,score_right,122,11,8,8,122,11
+# Frame 232, Action: fire, Step: 2
+232,frame_000232.png,player_paddle,142,103,10,30,142,103
+232,frame_000232.png,score_left,42,11,8,8,42,11
+232,frame_000232.png,score_right,122,11,8,8,122,11
+# Frame 233, Action: fire, Step: 3
+233,frame_000233.png,player_paddle,142,103,10,30,142,103
+233,frame_000233.png,score_left,42,11,8,8,42,11
+233,frame_000233.png,score_right,122,11,8,8,122,11
+# Frame 234, Action: fire, Step: 4
+234,frame_000234.png,player_paddle,142,103,10,30,142,103
+234,frame_000234.png,score_left,42,11,8,8,42,11
+234,frame_000234.png,score_right,122,11,8,8,122,11
+# Frame 235, Action: fire, Step: 5
+235,frame_000235.png,player_paddle,142,103,10,30,142,103
+235,frame_000235.png,score_left,42,11,8,8,42,11
+235,frame_000235.png,score_right,122,11,8,8,122,11
+# Frame 236, Action: fire, Step: 6
+236,frame_000236.png,player_paddle,142,103,10,30,142,103
+236,frame_000236.png,score_left,42,11,8,8,42,11
+236,frame_000236.png,score_right,122,11,8,8,122,11
+# Frame 237, Action: fire, Step: 7
+237,frame_000237.png,player_paddle,142,103,10,30,142,103
+237,frame_000237.png,score_left,42,11,8,8,42,11
+237,frame_000237.png,score_right,122,11,8,8,122,11
+# Frame 238, Action: fire, Step: 8
+238,frame_000238.png,player_paddle,142,103,10,30,142,103
+238,frame_000238.png,score_left,42,11,8,8,42,11
+238,frame_000238.png,score_right,122,11,8,8,122,11
+# Frame 239, Action: fire, Step: 9
+239,frame_000239.png,player_paddle,142,103,10,30,142,103
+239,frame_000239.png,score_left,42,11,8,8,42,11
+239,frame_000239.png,score_right,122,11,8,8,122,11
+# Frame 240, Action: fire, Step: 10
+240,frame_000240.png,player_paddle,142,103,10,30,142,103
+240,frame_000240.png,score_left,42,11,8,8,42,11
+240,frame_000240.png,score_right,122,11,8,8,122,11
+# Frame 241, Action: fire, Step: 11
+241,frame_000241.png,player_paddle,142,103,10,30,142,103
+241,frame_000241.png,score_left,42,11,8,8,42,11
+241,frame_000241.png,score_right,122,11,8,8,122,11
+# Frame 242, Action: fire, Step: 12
+242,frame_000242.png,player_paddle,142,103,10,30,142,103
+242,frame_000242.png,score_left,42,11,8,8,42,11
+242,frame_000242.png,score_right,122,11,8,8,122,11
+# Frame 243, Action: fire, Step: 13
+243,frame_000243.png,player_paddle,142,103,10,30,142,103
+243,frame_000243.png,score_left,42,11,8,8,42,11
+243,frame_000243.png,score_right,122,11,8,8,122,11
+# Frame 244, Action: fire, Step: 14
+244,frame_000244.png,player_paddle,142,103,10,30,142,103
+244,frame_000244.png,score_left,42,11,8,8,42,11
+244,frame_000244.png,score_right,122,11,8,8,122,11
+# Frame 245, Action: fire, Step: 15
+245,frame_000245.png,player_paddle,142,103,10,30,142,103
+245,frame_000245.png,score_left,42,11,8,8,42,11
+245,frame_000245.png,score_right,122,11,8,8,122,11
+# Frame 246, Action: fire, Step: 16
+246,frame_000246.png,player_paddle,142,103,10,30,142,103
+246,frame_000246.png,score_left,42,11,8,8,42,11
+246,frame_000246.png,score_right,122,11,8,8,122,11
+# Frame 247, Action: fire, Step: 17
+247,frame_000247.png,player_paddle,142,103,10,30,142,103
+247,frame_000247.png,score_left,42,11,8,8,42,11
+247,frame_000247.png,score_right,122,11,8,8,122,11
+# Frame 248, Action: fire, Step: 18
+248,frame_000248.png,player_paddle,142,103,10,30,142,103
+248,frame_000248.png,score_left,42,11,8,8,42,11
+248,frame_000248.png,score_right,122,11,8,8,122,11
+# Frame 249, Action: fire, Step: 19
+249,frame_000249.png,player_paddle,142,103,10,30,142,103
+249,frame_000249.png,score_left,42,11,8,8,42,11
+249,frame_000249.png,score_right,122,11,8,8,122,11
+# Frame 250, Action: fire, Step: 20
+250,frame_000250.png,player_paddle,142,103,10,30,142,103
+250,frame_000250.png,enemy_paddle,18,122,10,30,18,122
+250,frame_000250.png,ball,78,118,4,4,78,118
+250,frame_000250.png,score_left,42,11,8,8,42,11
+250,frame_000250.png,score_right,122,11,8,8,122,11
+# Frame 251, Action: fire, Step: 0
+251,frame_000251.png,player_paddle,142,103,10,30,142,103
+251,frame_000251.png,score_left,42,11,8,8,42,11
+251,frame_000251.png,score_right,122,11,8,8,122,11
+# Frame 252, Action: fire, Step: 1
+252,frame_000252.png,player_paddle,142,103,10,30,142,103
+252,frame_000252.png,score_left,42,11,8,8,42,11
+252,frame_000252.png,score_right,122,11,8,8,122,11
+# Frame 253, Action: fire, Step: 2
+253,frame_000253.png,player_paddle,142,103,10,30,142,103
+253,frame_000253.png,score_left,42,11,8,8,42,11
+253,frame_000253.png,score_right,122,11,8,8,122,11
+# Frame 254, Action: fire, Step: 3
+254,frame_000254.png,player_paddle,142,103,10,30,142,103
+254,frame_000254.png,score_left,42,11,8,8,42,11
+254,frame_000254.png,score_right,122,11,8,8,122,11
+# Frame 255, Action: fire, Step: 4
+255,frame_000255.png,player_paddle,142,103,10,30,142,103
+255,frame_000255.png,score_left,42,11,8,8,42,11
+255,frame_000255.png,score_right,122,11,8,8,122,11
+# Frame 256, Action: fire, Step: 5
+256,frame_000256.png,player_paddle,142,103,10,30,142,103
+256,frame_000256.png,score_left,42,11,8,8,42,11
+256,frame_000256.png,score_right,122,11,8,8,122,11
+# Frame 257, Action: fire, Step: 6
+257,frame_000257.png,player_paddle,142,103,10,30,142,103
+257,frame_000257.png,score_left,42,11,8,8,42,11
+257,frame_000257.png,score_right,122,11,8,8,122,11
+# Frame 258, Action: fire, Step: 7
+258,frame_000258.png,player_paddle,142,103,10,30,142,103
+258,frame_000258.png,score_left,42,11,8,8,42,11
+258,frame_000258.png,score_right,122,11,8,8,122,11
+# Frame 259, Action: fire, Step: 8
+259,frame_000259.png,player_paddle,142,103,10,30,142,103
+259,frame_000259.png,score_left,42,11,8,8,42,11
+259,frame_000259.png,score_right,122,11,8,8,122,11
+# Frame 260, Action: fire, Step: 9
+260,frame_000260.png,player_paddle,142,103,10,30,142,103
+260,frame_000260.png,score_left,42,11,8,8,42,11
+260,frame_000260.png,score_right,122,11,8,8,122,11
+# Frame 261, Action: fire, Step: 10
+261,frame_000261.png,player_paddle,142,103,10,30,142,103
+261,frame_000261.png,score_left,42,11,8,8,42,11
+261,frame_000261.png,score_right,122,11,8,8,122,11
+# Frame 262, Action: fire, Step: 11
+262,frame_000262.png,player_paddle,142,103,10,30,142,103
+262,frame_000262.png,score_left,42,11,8,8,42,11
+262,frame_000262.png,score_right,122,11,8,8,122,11
+# Frame 263, Action: fire, Step: 12
+263,frame_000263.png,player_paddle,142,103,10,30,142,103
+263,frame_000263.png,score_left,42,11,8,8,42,11
+263,frame_000263.png,score_right,122,11,8,8,122,11
+# Frame 264, Action: fire, Step: 13
+264,frame_000264.png,player_paddle,142,103,10,30,142,103
+264,frame_000264.png,score_left,42,11,8,8,42,11
+264,frame_000264.png,score_right,122,11,8,8,122,11
+# Frame 265, Action: fire, Step: 14
+265,frame_000265.png,player_paddle,142,103,10,30,142,103
+265,frame_000265.png,score_left,42,11,8,8,42,11
+265,frame_000265.png,score_right,122,11,8,8,122,11
+# Frame 266, Action: fire, Step: 15
+266,frame_000266.png,player_paddle,142,103,10,30,142,103
+266,frame_000266.png,score_left,42,11,8,8,42,11
+266,frame_000266.png,score_right,122,11,8,8,122,11
+# Frame 267, Action: fire, Step: 16
+267,frame_000267.png,player_paddle,142,103,10,30,142,103
+267,frame_000267.png,score_left,42,11,8,8,42,11
+267,frame_000267.png,score_right,122,11,8,8,122,11
+# Frame 268, Action: fire, Step: 17
+268,frame_000268.png,player_paddle,142,103,10,30,142,103
+268,frame_000268.png,score_left,42,11,8,8,42,11
+268,frame_000268.png,score_right,122,11,8,8,122,11
+# Frame 269, Action: fire, Step: 18
+269,frame_000269.png,player_paddle,142,103,10,30,142,103
+269,frame_000269.png,score_left,42,11,8,8,42,11
+269,frame_000269.png,score_right,122,11,8,8,122,11
+# Frame 270, Action: fire, Step: 19
+270,frame_000270.png,player_paddle,142,103,10,30,142,103
+270,frame_000270.png,score_left,42,11,8,8,42,11
+270,frame_000270.png,score_right,122,11,8,8,122,11
+# Frame 271, Action: fire, Step: 20
+271,frame_000271.png,player_paddle,142,103,10,30,142,103
+271,frame_000271.png,enemy_paddle,18,122,10,30,18,122
+271,frame_000271.png,ball,79,117,4,4,79,117
+271,frame_000271.png,score_left,42,11,8,8,42,11
+271,frame_000271.png,score_right,122,11,8,8,122,11
+# Frame 272, Action: fire, Step: 0
+272,frame_000272.png,player_paddle,142,103,10,30,142,103
+272,frame_000272.png,score_left,42,11,8,8,42,11
+272,frame_000272.png,score_right,122,11,8,8,122,11
+# Frame 273, Action: fire, Step: 1
+273,frame_000273.png,player_paddle,142,103,10,30,142,103
+273,frame_000273.png,score_left,42,11,8,8,42,11
+273,frame_000273.png,score_right,122,11,8,8,122,11
+# Frame 274, Action: fire, Step: 2
+274,frame_000274.png,player_paddle,142,103,10,30,142,103
+274,frame_000274.png,score_left,42,11,8,8,42,11
+274,frame_000274.png,score_right,122,11,8,8,122,11
+# Frame 275, Action: fire, Step: 3
+275,frame_000275.png,player_paddle,142,103,10,30,142,103
+275,frame_000275.png,score_left,42,11,8,8,42,11
+275,frame_000275.png,score_right,122,11,8,8,122,11
+# Frame 276, Action: fire, Step: 4
+276,frame_000276.png,player_paddle,142,103,10,30,142,103
+276,frame_000276.png,score_left,42,11,8,8,42,11
+276,frame_000276.png,score_right,122,11,8,8,122,11
+# Frame 277, Action: fire, Step: 5
+277,frame_000277.png,player_paddle,142,103,10,30,142,103
+277,frame_000277.png,score_left,42,11,8,8,42,11
+277,frame_000277.png,score_right,122,11,8,8,122,11
+# Frame 278, Action: fire, Step: 6
+278,frame_000278.png,player_paddle,142,103,10,30,142,103
+278,frame_000278.png,score_left,42,11,8,8,42,11
+278,frame_000278.png,score_right,122,11,8,8,122,11
+# Frame 279, Action: fire, Step: 7
+279,frame_000279.png,player_paddle,142,103,10,30,142,103
+279,frame_000279.png,score_left,42,11,8,8,42,11
+279,frame_000279.png,score_right,122,11,8,8,122,11
+# Frame 280, Action: fire, Step: 8
+280,frame_000280.png,player_paddle,142,103,10,30,142,103
+280,frame_000280.png,score_left,42,11,8,8,42,11
+280,frame_000280.png,score_right,122,11,8,8,122,11
+# Frame 281, Action: fire, Step: 9
+281,frame_000281.png,player_paddle,142,103,10,30,142,103
+281,frame_000281.png,score_left,42,11,8,8,42,11
+281,frame_000281.png,score_right,122,11,8,8,122,11
+# Frame 282, Action: fire, Step: 10
+282,frame_000282.png,player_paddle,142,103,10,30,142,103
+282,frame_000282.png,score_left,42,11,8,8,42,11
+282,frame_000282.png,score_right,122,11,8,8,122,11
+# Frame 283, Action: fire, Step: 11
+283,frame_000283.png,player_paddle,142,103,10,30,142,103
+283,frame_000283.png,score_left,42,11,8,8,42,11
+283,frame_000283.png,score_right,122,11,8,8,122,11
+# Frame 284, Action: fire, Step: 12
+284,frame_000284.png,player_paddle,142,103,10,30,142,103
+284,frame_000284.png,score_left,42,11,8,8,42,11
+284,frame_000284.png,score_right,122,11,8,8,122,11
+# Frame 285, Action: fire, Step: 13
+285,frame_000285.png,player_paddle,142,103,10,30,142,103
+285,frame_000285.png,score_left,42,11,8,8,42,11
+285,frame_000285.png,score_right,122,11,8,8,122,11
+# Frame 286, Action: fire, Step: 14
+286,frame_000286.png,player_paddle,142,103,10,30,142,103
+286,frame_000286.png,score_left,42,11,8,8,42,11
+286,frame_000286.png,score_right,122,11,8,8,122,11
+# Frame 287, Action: fire, Step: 15
+287,frame_000287.png,player_paddle,142,103,10,30,142,103
+287,frame_000287.png,score_left,42,11,8,8,42,11
+287,frame_000287.png,score_right,122,11,8,8,122,11
+# Frame 288, Action: fire, Step: 16
+288,frame_000288.png,player_paddle,142,103,10,30,142,103
+288,frame_000288.png,score_left,42,11,8,8,42,11
+288,frame_000288.png,score_right,122,11,8,8,122,11
+# Frame 289, Action: fire, Step: 17
+289,frame_000289.png,player_paddle,142,103,10,30,142,103
+289,frame_000289.png,score_left,42,11,8,8,42,11
+289,frame_000289.png,score_right,122,11,8,8,122,11
+# Frame 290, Action: fire, Step: 18
+290,frame_000290.png,player_paddle,142,103,10,30,142,103
+290,frame_000290.png,score_left,42,11,8,8,42,11
+290,frame_000290.png,score_right,122,11,8,8,122,11
+# Frame 291, Action: fire, Step: 19
+291,frame_000291.png,player_paddle,142,103,10,30,142,103
+291,frame_000291.png,score_left,42,11,8,8,42,11
+291,frame_000291.png,score_right,122,11,8,8,122,11
+# Frame 292, Action: fire, Step: 20
+292,frame_000292.png,player_paddle,142,103,10,30,142,103
+292,frame_000292.png,score_left,42,11,8,8,42,11
+292,frame_000292.png,score_right,122,11,8,8,122,11
+# Frame 293, Action: fire, Step: 21
+293,frame_000293.png,player_paddle,142,103,10,30,142,103
+293,frame_000293.png,enemy_paddle,18,124,10,30,18,124
+293,frame_000293.png,ball,76,120,4,4,76,120
+293,frame_000293.png,score_left,42,11,8,8,42,11
+293,frame_000293.png,score_right,122,11,8,8,122,11
+# Frame 294, Action: fire, Step: 0
+294,frame_000294.png,player_paddle,142,103,10,30,142,103
+294,frame_000294.png,score_left,42,11,8,8,42,11
+294,frame_000294.png,score_right,122,11,8,8,122,11
+# Frame 295, Action: fire, Step: 1
+295,frame_000295.png,player_paddle,142,103,10,30,142,103
+295,frame_000295.png,score_left,42,11,8,8,42,11
+295,frame_000295.png,score_right,122,11,8,8,122,11
+# Frame 296, Action: fire, Step: 2
+296,frame_000296.png,player_paddle,142,103,10,30,142,103
+296,frame_000296.png,score_left,42,11,8,8,42,11
+296,frame_000296.png,score_right,122,11,8,8,122,11
+# Frame 297, Action: fire, Step: 3
+297,frame_000297.png,player_paddle,142,103,10,30,142,103
+297,frame_000297.png,score_left,42,11,8,8,42,11
+297,frame_000297.png,score_right,122,11,8,8,122,11
+# Frame 298, Action: fire, Step: 4
+298,frame_000298.png,player_paddle,142,103,10,30,142,103
+298,frame_000298.png,score_left,42,11,8,8,42,11
+298,frame_000298.png,score_right,122,11,8,8,122,11
+# Frame 299, Action: fire, Step: 5
+299,frame_000299.png,player_paddle,142,103,10,30,142,103
+299,frame_000299.png,score_left,42,11,8,8,42,11
+299,frame_000299.png,score_right,122,11,8,8,122,11
+# Frame 300, Action: fire, Step: 6
+300,frame_000300.png,player_paddle,142,103,10,30,142,103
+300,frame_000300.png,score_left,42,11,8,8,42,11
+300,frame_000300.png,score_right,122,11,8,8,122,11
+# Frame 301, Action: fire, Step: 7
+301,frame_000301.png,player_paddle,142,103,10,30,142,103
+301,frame_000301.png,score_left,42,11,8,8,42,11
+301,frame_000301.png,score_right,122,11,8,8,122,11
+# Frame 302, Action: fire, Step: 8
+302,frame_000302.png,player_paddle,142,103,10,30,142,103
+302,frame_000302.png,score_left,42,11,8,8,42,11
+302,frame_000302.png,score_right,122,11,8,8,122,11
+# Frame 303, Action: fire, Step: 9
+303,frame_000303.png,player_paddle,142,103,10,30,142,103
+303,frame_000303.png,score_left,42,11,8,8,42,11
+303,frame_000303.png,score_right,122,11,8,8,122,11
+# Frame 304, Action: fire, Step: 10
+304,frame_000304.png,player_paddle,142,103,10,30,142,103
+304,frame_000304.png,score_left,42,11,8,8,42,11
+304,frame_000304.png,score_right,122,11,8,8,122,11
+# Frame 305, Action: fire, Step: 11
+305,frame_000305.png,player_paddle,142,103,10,30,142,103
+305,frame_000305.png,score_left,42,11,8,8,42,11
+305,frame_000305.png,score_right,122,11,8,8,122,11
+# Frame 306, Action: fire, Step: 12
+306,frame_000306.png,player_paddle,142,103,10,30,142,103
+306,frame_000306.png,score_left,42,11,8,8,42,11
+306,frame_000306.png,score_right,122,11,8,8,122,11
+# Frame 307, Action: fire, Step: 13
+307,frame_000307.png,player_paddle,142,103,10,30,142,103
+307,frame_000307.png,score_left,42,11,8,8,42,11
+307,frame_000307.png,score_right,122,11,8,8,122,11
+# Frame 308, Action: fire, Step: 14
+308,frame_000308.png,player_paddle,142,103,10,30,142,103
+308,frame_000308.png,score_left,42,11,8,8,42,11
+308,frame_000308.png,score_right,122,11,8,8,122,11
+# Frame 309, Action: fire, Step: 15
+309,frame_000309.png,player_paddle,142,103,10,30,142,103
+309,frame_000309.png,score_left,42,11,8,8,42,11
+309,frame_000309.png,score_right,122,11,8,8,122,11
+# Frame 310, Action: fire, Step: 16
+310,frame_000310.png,player_paddle,142,103,10,30,142,103
+310,frame_000310.png,score_left,42,11,8,8,42,11
+310,frame_000310.png,score_right,122,11,8,8,122,11
+# Frame 311, Action: fire, Step: 17
+311,frame_000311.png,player_paddle,142,103,10,30,142,103
+311,frame_000311.png,score_left,42,11,8,8,42,11
+311,frame_000311.png,score_right,122,11,8,8,122,11
+# Frame 312, Action: fire, Step: 18
+312,frame_000312.png,player_paddle,142,103,10,30,142,103
+312,frame_000312.png,enemy_paddle,18,124,10,30,18,124
+312,frame_000312.png,ball,77,119,4,4,77,119
+312,frame_000312.png,score_left,42,11,8,8,42,11
+312,frame_000312.png,score_right,122,11,8,8,122,11
+# Frame 313, Action: noop, Step: 19
+313,frame_000313.png,player_paddle,142,103,10,30,142,103
+313,frame_000313.png,enemy_paddle,18,126,10,30,18,126
+313,frame_000313.png,ball,74,122,4,4,74,122
+313,frame_000313.png,score_left,42,11,8,8,42,11
+313,frame_000313.png,score_right,122,11,8,8,122,11
+# Frame 314, Action: fire, Step: 0
+314,frame_000314.png,player_paddle,142,103,10,30,142,103
+314,frame_000314.png,score_left,42,11,8,8,42,11
+314,frame_000314.png,score_right,122,11,8,8,122,11
+# Frame 315, Action: fire, Step: 1
+315,frame_000315.png,player_paddle,142,103,10,30,142,103
+315,frame_000315.png,score_left,42,11,8,8,42,11
+315,frame_000315.png,score_right,122,11,8,8,122,11
+# Frame 316, Action: fire, Step: 2
+316,frame_000316.png,player_paddle,142,103,10,30,142,103
+316,frame_000316.png,score_left,42,11,8,8,42,11
+316,frame_000316.png,score_right,122,11,8,8,122,11
+# Frame 317, Action: fire, Step: 3
+317,frame_000317.png,player_paddle,142,103,10,30,142,103
+317,frame_000317.png,score_left,42,11,8,8,42,11
+317,frame_000317.png,score_right,122,11,8,8,122,11
+# Frame 318, Action: fire, Step: 4
+318,frame_000318.png,player_paddle,142,103,10,30,142,103
+318,frame_000318.png,score_left,42,11,8,8,42,11
+318,frame_000318.png,score_right,122,11,8,8,122,11
+# Frame 319, Action: fire, Step: 5
+319,frame_000319.png,player_paddle,142,103,10,30,142,103
+319,frame_000319.png,score_left,42,11,8,8,42,11
+319,frame_000319.png,score_right,122,11,8,8,122,11
+# Frame 320, Action: fire, Step: 6
+320,frame_000320.png,player_paddle,142,103,10,30,142,103
+320,frame_000320.png,score_left,42,11,8,8,42,11
+320,frame_000320.png,score_right,122,11,8,8,122,11
+# Frame 321, Action: fire, Step: 7
+321,frame_000321.png,player_paddle,142,103,10,30,142,103
+321,frame_000321.png,score_left,42,11,8,8,42,11
+321,frame_000321.png,score_right,122,11,8,8,122,11
+# Frame 322, Action: fire, Step: 8
+322,frame_000322.png,player_paddle,142,103,10,30,142,103
+322,frame_000322.png,score_left,42,11,8,8,42,11
+322,frame_000322.png,score_right,122,11,8,8,122,11
+# Frame 323, Action: fire, Step: 9
+323,frame_000323.png,player_paddle,142,103,10,30,142,103
+323,frame_000323.png,score_left,42,11,8,8,42,11
+323,frame_000323.png,score_right,122,11,8,8,122,11
+# Frame 324, Action: fire, Step: 10
+324,frame_000324.png,player_paddle,142,103,10,30,142,103
+324,frame_000324.png,score_left,42,11,8,8,42,11
+324,frame_000324.png,score_right,122,11,8,8,122,11
+# Frame 325, Action: fire, Step: 11
+325,frame_000325.png,player_paddle,142,103,10,30,142,103
+325,frame_000325.png,score_left,42,11,8,8,42,11
+325,frame_000325.png,score_right,122,11,8,8,122,11
+# Frame 326, Action: fire, Step: 12
+326,frame_000326.png,player_paddle,142,103,10,30,142,103
+326,frame_000326.png,score_left,42,11,8,8,42,11
+326,frame_000326.png,score_right,122,11,8,8,122,11
+# Frame 327, Action: fire, Step: 13
+327,frame_000327.png,player_paddle,142,103,10,30,142,103
+327,frame_000327.png,score_left,42,11,8,8,42,11
+327,frame_000327.png,score_right,122,11,8,8,122,11
+# Frame 328, Action: fire, Step: 14
+328,frame_000328.png,player_paddle,142,103,10,30,142,103
+328,frame_000328.png,score_left,42,11,8,8,42,11
+328,frame_000328.png,score_right,122,11,8,8,122,11
+# Frame 329, Action: fire, Step: 15
+329,frame_000329.png,player_paddle,142,103,10,30,142,103
+329,frame_000329.png,score_left,42,11,8,8,42,11
+329,frame_000329.png,score_right,122,11,8,8,122,11
+# Frame 330, Action: fire, Step: 16
+330,frame_000330.png,player_paddle,142,103,10,30,142,103
+330,frame_000330.png,score_left,42,11,8,8,42,11
+330,frame_000330.png,score_right,122,11,8,8,122,11
+# Frame 331, Action: fire, Step: 17
+331,frame_000331.png,player_paddle,142,103,10,30,142,103
+331,frame_000331.png,score_left,42,11,8,8,42,11
+331,frame_000331.png,score_right,122,11,8,8,122,11
+# Frame 332, Action: fire, Step: 18
+332,frame_000332.png,player_paddle,142,103,10,30,142,103
+332,frame_000332.png,enemy_paddle,18,124,10,30,18,124
+332,frame_000332.png,ball,76,120,4,4,76,120
+332,frame_000332.png,score_left,42,11,8,8,42,11
+332,frame_000332.png,score_right,122,11,8,8,122,11
+# Frame 333, Action: noop, Step: 19
+333,frame_000333.png,player_paddle,142,103,10,30,142,103
+333,frame_000333.png,enemy_paddle,18,128,10,30,18,128
+333,frame_000333.png,ball,72,124,4,4,72,124
+333,frame_000333.png,score_left,42,11,8,8,42,11
+333,frame_000333.png,score_right,122,11,8,8,122,11
+# Frame 334, Action: noop, Step: 20
+334,frame_000334.png,player_paddle,142,103,10,30,142,103
+334,frame_000334.png,enemy_paddle,18,132,10,30,18,132
+334,frame_000334.png,ball,69,127,4,4,69,127
+334,frame_000334.png,score_left,42,11,8,8,42,11
+334,frame_000334.png,score_right,122,11,8,8,122,11
+# Frame 335, Action: noop, Step: 21
+335,frame_000335.png,player_paddle,142,103,10,30,142,103
+335,frame_000335.png,enemy_paddle,18,134,10,30,18,134
+335,frame_000335.png,ball,66,130,4,4,66,130
+335,frame_000335.png,score_left,42,11,8,8,42,11
+335,frame_000335.png,score_right,122,11,8,8,122,11
+# Frame 336, Action: noop, Step: 22
+336,frame_000336.png,player_paddle,142,103,10,30,142,103
+336,frame_000336.png,enemy_paddle,18,138,10,30,18,138
+336,frame_000336.png,ball,63,133,4,4,63,133
+336,frame_000336.png,score_left,42,11,8,8,42,11
+336,frame_000336.png,score_right,122,11,8,8,122,11
+# Frame 337, Action: fire, Step: 0
+337,frame_000337.png,player_paddle,142,103,10,30,142,103
+337,frame_000337.png,score_left,42,11,8,8,42,11
+337,frame_000337.png,score_right,122,11,8,8,122,11
+# Frame 338, Action: fire, Step: 1
+338,frame_000338.png,player_paddle,142,103,10,30,142,103
+338,frame_000338.png,score_left,42,11,8,8,42,11
+338,frame_000338.png,score_right,122,11,8,8,122,11
+# Frame 339, Action: fire, Step: 2
+339,frame_000339.png,player_paddle,142,103,10,30,142,103
+339,frame_000339.png,score_left,42,11,8,8,42,11
+339,frame_000339.png,score_right,122,11,8,8,122,11
+# Frame 340, Action: fire, Step: 3
+340,frame_000340.png,player_paddle,142,103,10,30,142,103
+340,frame_000340.png,score_left,42,11,8,8,42,11
+340,frame_000340.png,score_right,122,11,8,8,122,11
+# Frame 341, Action: fire, Step: 4
+341,frame_000341.png,player_paddle,142,103,10,30,142,103
+341,frame_000341.png,score_left,42,11,8,8,42,11
+341,frame_000341.png,score_right,122,11,8,8,122,11
+# Frame 342, Action: fire, Step: 5
+342,frame_000342.png,player_paddle,142,103,10,30,142,103
+342,frame_000342.png,score_left,42,11,8,8,42,11
+342,frame_000342.png,score_right,122,11,8,8,122,11
+# Frame 343, Action: fire, Step: 6
+343,frame_000343.png,player_paddle,142,103,10,30,142,103
+343,frame_000343.png,score_left,42,11,8,8,42,11
+343,frame_000343.png,score_right,122,11,8,8,122,11
+# Frame 344, Action: fire, Step: 7
+344,frame_000344.png,player_paddle,142,103,10,30,142,103
+344,frame_000344.png,score_left,42,11,8,8,42,11
+344,frame_000344.png,score_right,122,11,8,8,122,11
+# Frame 345, Action: fire, Step: 8
+345,frame_000345.png,player_paddle,142,103,10,30,142,103
+345,frame_000345.png,score_left,42,11,8,8,42,11
+345,frame_000345.png,score_right,122,11,8,8,122,11
+# Frame 346, Action: fire, Step: 9
+346,frame_000346.png,player_paddle,142,103,10,30,142,103
+346,frame_000346.png,score_left,42,11,8,8,42,11
+346,frame_000346.png,score_right,122,11,8,8,122,11
+# Frame 347, Action: fire, Step: 10
+347,frame_000347.png,player_paddle,142,103,10,30,142,103
+347,frame_000347.png,score_left,42,11,8,8,42,11
+347,frame_000347.png,score_right,122,11,8,8,122,11
+# Frame 348, Action: fire, Step: 11
+348,frame_000348.png,player_paddle,142,103,10,30,142,103
+348,frame_000348.png,score_left,42,11,8,8,42,11
+348,frame_000348.png,score_right,122,11,8,8,122,11
+# Frame 349, Action: fire, Step: 12
+349,frame_000349.png,player_paddle,142,103,10,30,142,103
+349,frame_000349.png,score_left,42,11,8,8,42,11
+349,frame_000349.png,score_right,122,11,8,8,122,11
+# Frame 350, Action: fire, Step: 13
+350,frame_000350.png,player_paddle,142,103,10,30,142,103
+350,frame_000350.png,score_left,42,11,8,8,42,11
+350,frame_000350.png,score_right,122,11,8,8,122,11
+# Frame 351, Action: fire, Step: 14
+351,frame_000351.png,player_paddle,142,103,10,30,142,103
+351,frame_000351.png,score_left,42,11,8,8,42,11
+351,frame_000351.png,score_right,122,11,8,8,122,11
+# Frame 352, Action: fire, Step: 15
+352,frame_000352.png,player_paddle,142,103,10,30,142,103
+352,frame_000352.png,score_left,42,11,8,8,42,11
+352,frame_000352.png,score_right,122,11,8,8,122,11
+# Frame 353, Action: fire, Step: 16
+353,frame_000353.png,player_paddle,142,103,10,30,142,103
+353,frame_000353.png,enemy_paddle,18,122,10,30,18,122
+353,frame_000353.png,ball,79,117,4,4,79,117
+353,frame_000353.png,score_left,42,11,8,8,42,11
+353,frame_000353.png,score_right,122,11,8,8,122,11
+# Frame 354, Action: noop, Step: 17
+354,frame_000354.png,player_paddle,142,103,10,30,142,103
+354,frame_000354.png,enemy_paddle,18,124,10,30,18,124
+354,frame_000354.png,ball,76,120,4,4,76,120
+354,frame_000354.png,score_left,42,11,8,8,42,11
+354,frame_000354.png,score_right,122,11,8,8,122,11
+# Frame 355, Action: noop, Step: 18
+355,frame_000355.png,player_paddle,142,103,10,30,142,103
+355,frame_000355.png,enemy_paddle,18,128,10,30,18,128
+355,frame_000355.png,ball,73,123,4,4,73,123
+355,frame_000355.png,score_left,42,11,8,8,42,11
+355,frame_000355.png,score_right,122,11,8,8,122,11
+# Frame 356, Action: noop, Step: 19
+356,frame_000356.png,player_paddle,142,103,10,30,142,103
+356,frame_000356.png,enemy_paddle,18,130,10,30,18,130
+356,frame_000356.png,ball,71,125,4,4,71,125
+356,frame_000356.png,score_left,42,11,8,8,42,11
+356,frame_000356.png,score_right,122,11,8,8,122,11
+# Frame 357, Action: noop, Step: 20
+357,frame_000357.png,player_paddle,142,103,10,30,142,103
+357,frame_000357.png,enemy_paddle,18,132,10,30,18,132
+357,frame_000357.png,ball,69,127,4,4,69,127
+357,frame_000357.png,score_left,42,11,8,8,42,11
+357,frame_000357.png,score_right,122,11,8,8,122,11
+# Frame 358, Action: fire, Step: 0
+358,frame_000358.png,player_paddle,142,103,10,30,142,103
+358,frame_000358.png,score_left,42,11,8,8,42,11
+358,frame_000358.png,score_right,122,11,8,8,122,11
+# Frame 359, Action: fire, Step: 1
+359,frame_000359.png,player_paddle,142,103,10,30,142,103
+359,frame_000359.png,score_left,42,11,8,8,42,11
+359,frame_000359.png,score_right,122,11,8,8,122,11
+# Frame 360, Action: fire, Step: 2
+360,frame_000360.png,player_paddle,142,103,10,30,142,103
+360,frame_000360.png,score_left,42,11,8,8,42,11
+360,frame_000360.png,score_right,122,11,8,8,122,11
+# Frame 361, Action: fire, Step: 3
+361,frame_000361.png,player_paddle,142,103,10,30,142,103
+361,frame_000361.png,score_left,42,11,8,8,42,11
+361,frame_000361.png,score_right,122,11,8,8,122,11
+# Frame 362, Action: fire, Step: 4
+362,frame_000362.png,player_paddle,142,103,10,30,142,103
+362,frame_000362.png,score_left,42,11,8,8,42,11
+362,frame_000362.png,score_right,122,11,8,8,122,11
+# Frame 363, Action: fire, Step: 5
+363,frame_000363.png,player_paddle,142,103,10,30,142,103
+363,frame_000363.png,score_left,42,11,8,8,42,11
+363,frame_000363.png,score_right,122,11,8,8,122,11
+# Frame 364, Action: fire, Step: 6
+364,frame_000364.png,player_paddle,142,103,10,30,142,103
+364,frame_000364.png,score_left,42,11,8,8,42,11
+364,frame_000364.png,score_right,122,11,8,8,122,11
+# Frame 365, Action: fire, Step: 7
+365,frame_000365.png,player_paddle,142,103,10,30,142,103
+365,frame_000365.png,score_left,42,11,8,8,42,11
+365,frame_000365.png,score_right,122,11,8,8,122,11
+# Frame 366, Action: fire, Step: 8
+366,frame_000366.png,player_paddle,142,103,10,30,142,103
+366,frame_000366.png,score_left,42,11,8,8,42,11
+366,frame_000366.png,score_right,122,11,8,8,122,11
+# Frame 367, Action: fire, Step: 9
+367,frame_000367.png,player_paddle,142,103,10,30,142,103
+367,frame_000367.png,score_left,42,11,8,8,42,11
+367,frame_000367.png,score_right,122,11,8,8,122,11
+# Frame 368, Action: fire, Step: 10
+368,frame_000368.png,player_paddle,142,103,10,30,142,103
+368,frame_000368.png,score_left,42,11,8,8,42,11
+368,frame_000368.png,score_right,122,11,8,8,122,11
+# Frame 369, Action: fire, Step: 11
+369,frame_000369.png,player_paddle,142,103,10,30,142,103
+369,frame_000369.png,score_left,42,11,8,8,42,11
+369,frame_000369.png,score_right,122,11,8,8,122,11
+# Frame 370, Action: fire, Step: 12
+370,frame_000370.png,player_paddle,142,103,10,30,142,103
+370,frame_000370.png,score_left,42,11,8,8,42,11
+370,frame_000370.png,score_right,122,11,8,8,122,11
+# Frame 371, Action: fire, Step: 13
+371,frame_000371.png,player_paddle,142,103,10,30,142,103
+371,frame_000371.png,score_left,42,11,8,8,42,11
+371,frame_000371.png,score_right,122,11,8,8,122,11
+# Frame 372, Action: fire, Step: 14
+372,frame_000372.png,player_paddle,142,103,10,30,142,103
+372,frame_000372.png,score_left,42,11,8,8,42,11
+372,frame_000372.png,score_right,122,11,8,8,122,11
+# Frame 373, Action: fire, Step: 15
+373,frame_000373.png,player_paddle,142,103,10,30,142,103
+373,frame_000373.png,score_left,42,11,8,8,42,11
+373,frame_000373.png,score_right,122,11,8,8,122,11
+# Frame 374, Action: fire, Step: 16
+374,frame_000374.png,player_paddle,142,103,10,30,142,103
+374,frame_000374.png,score_left,42,11,8,8,42,11
+374,frame_000374.png,score_right,122,11,8,8,122,11
+# Frame 375, Action: fire, Step: 17
+375,frame_000375.png,player_paddle,142,103,10,30,142,103
+375,frame_000375.png,score_left,42,11,8,8,42,11
+375,frame_000375.png,score_right,122,11,8,8,122,11
+# Frame 376, Action: fire, Step: 18
+376,frame_000376.png,player_paddle,142,103,10,30,142,103
+376,frame_000376.png,score_left,42,11,8,8,42,11
+376,frame_000376.png,score_right,122,11,8,8,122,11
+# Frame 377, Action: fire, Step: 19
+377,frame_000377.png,player_paddle,142,103,10,30,142,103
+377,frame_000377.png,enemy_paddle,18,122,10,30,18,122
+377,frame_000377.png,ball,78,118,4,4,78,118
+377,frame_000377.png,score_left,42,11,8,8,42,11
+377,frame_000377.png,score_right,122,11,8,8,122,11
+# Frame 378, Action: fire, Step: 0
+378,frame_000378.png,player_paddle,142,103,10,30,142,103
+378,frame_000378.png,score_left,42,11,8,8,42,11
+378,frame_000378.png,score_right,122,11,8,8,122,11
+# Frame 379, Action: fire, Step: 1
+379,frame_000379.png,player_paddle,142,103,10,30,142,103
+379,frame_000379.png,score_left,42,11,8,8,42,11
+379,frame_000379.png,score_right,122,11,8,8,122,11
+# Frame 380, Action: fire, Step: 2
+380,frame_000380.png,player_paddle,142,103,10,30,142,103
+380,frame_000380.png,score_left,42,11,8,8,42,11
+380,frame_000380.png,score_right,122,11,8,8,122,11
+# Frame 381, Action: fire, Step: 3
+381,frame_000381.png,player_paddle,142,103,10,30,142,103
+381,frame_000381.png,score_left,42,11,8,8,42,11
+381,frame_000381.png,score_right,122,11,8,8,122,11
+# Frame 382, Action: fire, Step: 4
+382,frame_000382.png,player_paddle,142,103,10,30,142,103
+382,frame_000382.png,score_left,42,11,8,8,42,11
+382,frame_000382.png,score_right,122,11,8,8,122,11
+# Frame 383, Action: fire, Step: 5
+383,frame_000383.png,player_paddle,142,103,10,30,142,103
+383,frame_000383.png,score_left,42,11,8,8,42,11
+383,frame_000383.png,score_right,122,11,8,8,122,11
+# Frame 384, Action: fire, Step: 6
+384,frame_000384.png,player_paddle,142,103,10,30,142,103
+384,frame_000384.png,score_left,42,11,8,8,42,11
+384,frame_000384.png,score_right,122,11,8,8,122,11
+# Frame 385, Action: fire, Step: 7
+385,frame_000385.png,player_paddle,142,103,10,30,142,103
+385,frame_000385.png,score_left,42,11,8,8,42,11
+385,frame_000385.png,score_right,122,11,8,8,122,11
+# Frame 386, Action: fire, Step: 8
+386,frame_000386.png,player_paddle,142,103,10,30,142,103
+386,frame_000386.png,score_left,42,11,8,8,42,11
+386,frame_000386.png,score_right,122,11,8,8,122,11
+# Frame 387, Action: fire, Step: 9
+387,frame_000387.png,player_paddle,142,103,10,30,142,103
+387,frame_000387.png,score_left,42,11,8,8,42,11
+387,frame_000387.png,score_right,122,11,8,8,122,11
+# Frame 388, Action: fire, Step: 10
+388,frame_000388.png,player_paddle,142,103,10,30,142,103
+388,frame_000388.png,score_left,42,11,8,8,42,11
+388,frame_000388.png,score_right,122,11,8,8,122,11
+# Frame 389, Action: fire, Step: 11
+389,frame_000389.png,player_paddle,142,103,10,30,142,103
+389,frame_000389.png,score_left,42,11,8,8,42,11
+389,frame_000389.png,score_right,122,11,8,8,122,11
+# Frame 390, Action: fire, Step: 12
+390,frame_000390.png,player_paddle,142,103,10,30,142,103
+390,frame_000390.png,score_left,42,11,8,8,42,11
+390,frame_000390.png,score_right,122,11,8,8,122,11
+# Frame 391, Action: fire, Step: 13
+391,frame_000391.png,player_paddle,142,103,10,30,142,103
+391,frame_000391.png,score_left,42,11,8,8,42,11
+391,frame_000391.png,score_right,122,11,8,8,122,11
+# Frame 392, Action: fire, Step: 14
+392,frame_000392.png,player_paddle,142,103,10,30,142,103
+392,frame_000392.png,score_left,42,11,8,8,42,11
+392,frame_000392.png,score_right,122,11,8,8,122,11
+# Frame 393, Action: fire, Step: 15
+393,frame_000393.png,player_paddle,142,103,10,30,142,103
+393,frame_000393.png,score_left,42,11,8,8,42,11
+393,frame_000393.png,score_right,122,11,8,8,122,11
+# Frame 394, Action: fire, Step: 16
+394,frame_000394.png,player_paddle,142,103,10,30,142,103
+394,frame_000394.png,score_left,42,11,8,8,42,11
+394,frame_000394.png,score_right,122,11,8,8,122,11
+# Frame 395, Action: fire, Step: 17
+395,frame_000395.png,player_paddle,142,103,10,30,142,103
+395,frame_000395.png,enemy_paddle,18,122,10,30,18,122
+395,frame_000395.png,ball,78,118,4,4,78,118
+395,frame_000395.png,score_left,42,11,8,8,42,11
+395,frame_000395.png,score_right,122,11,8,8,122,11
+# Frame 396, Action: fire, Step: 0
+396,frame_000396.png,player_paddle,142,103,10,30,142,103
+396,frame_000396.png,score_left,42,11,8,8,42,11
+396,frame_000396.png,score_right,122,11,8,8,122,11
+# Frame 397, Action: fire, Step: 1
+397,frame_000397.png,player_paddle,142,103,10,30,142,103
+397,frame_000397.png,score_left,42,11,8,8,42,11
+397,frame_000397.png,score_right,122,11,8,8,122,11
+# Frame 398, Action: fire, Step: 2
+398,frame_000398.png,player_paddle,142,103,10,30,142,103
+398,frame_000398.png,score_left,42,11,8,8,42,11
+398,frame_000398.png,score_right,122,11,8,8,122,11
+# Frame 399, Action: fire, Step: 3
+399,frame_000399.png,player_paddle,142,103,10,30,142,103
+399,frame_000399.png,score_left,42,11,8,8,42,11
+399,frame_000399.png,score_right,122,11,8,8,122,11
+# Frame 400, Action: fire, Step: 4
+400,frame_000400.png,player_paddle,142,103,10,30,142,103
+400,frame_000400.png,score_left,42,11,8,8,42,11
+400,frame_000400.png,score_right,122,11,8,8,122,11
+# Frame 401, Action: fire, Step: 5
+401,frame_000401.png,player_paddle,142,103,10,30,142,103
+401,frame_000401.png,score_left,42,11,8,8,42,11
+401,frame_000401.png,score_right,122,11,8,8,122,11
+# Frame 402, Action: fire, Step: 6
+402,frame_000402.png,player_paddle,142,103,10,30,142,103
+402,frame_000402.png,score_left,42,11,8,8,42,11
+402,frame_000402.png,score_right,122,11,8,8,122,11
+# Frame 403, Action: fire, Step: 7
+403,frame_000403.png,player_paddle,142,103,10,30,142,103
+403,frame_000403.png,score_left,42,11,8,8,42,11
+403,frame_000403.png,score_right,122,11,8,8,122,11
+# Frame 404, Action: fire, Step: 8
+404,frame_000404.png,player_paddle,142,103,10,30,142,103
+404,frame_000404.png,score_left,42,11,8,8,42,11
+404,frame_000404.png,score_right,122,11,8,8,122,11
+# Frame 405, Action: fire, Step: 9
+405,frame_000405.png,player_paddle,142,103,10,30,142,103
+405,frame_000405.png,score_left,42,11,8,8,42,11
+405,frame_000405.png,score_right,122,11,8,8,122,11
+# Frame 406, Action: fire, Step: 10
+406,frame_000406.png,player_paddle,142,103,10,30,142,103
+406,frame_000406.png,score_left,42,11,8,8,42,11
+406,frame_000406.png,score_right,122,11,8,8,122,11
+# Frame 407, Action: fire, Step: 11
+407,frame_000407.png,player_paddle,142,103,10,30,142,103
+407,frame_000407.png,score_left,42,11,8,8,42,11
+407,frame_000407.png,score_right,122,11,8,8,122,11
+# Frame 408, Action: fire, Step: 12
+408,frame_000408.png,player_paddle,142,103,10,30,142,103
+408,frame_000408.png,score_left,42,11,8,8,42,11
+408,frame_000408.png,score_right,122,11,8,8,122,11
+# Frame 409, Action: fire, Step: 13
+409,frame_000409.png,player_paddle,142,103,10,30,142,103
+409,frame_000409.png,score_left,42,11,8,8,42,11
+409,frame_000409.png,score_right,122,11,8,8,122,11
+# Frame 410, Action: fire, Step: 14
+410,frame_000410.png,player_paddle,142,103,10,30,142,103
+410,frame_000410.png,score_left,42,11,8,8,42,11
+410,frame_000410.png,score_right,122,11,8,8,122,11
+# Frame 411, Action: fire, Step: 15
+411,frame_000411.png,player_paddle,142,103,10,30,142,103
+411,frame_000411.png,score_left,42,11,8,8,42,11
+411,frame_000411.png,score_right,122,11,8,8,122,11
+# Frame 412, Action: fire, Step: 16
+412,frame_000412.png,player_paddle,142,103,10,30,142,103
+412,frame_000412.png,score_left,42,11,8,8,42,11
+412,frame_000412.png,score_right,122,11,8,8,122,11
+# Frame 413, Action: fire, Step: 17
+413,frame_000413.png,player_paddle,142,103,10,30,142,103
+413,frame_000413.png,enemy_paddle,18,122,10,30,18,122
+413,frame_000413.png,ball,78,118,4,4,78,118
+413,frame_000413.png,score_left,42,11,8,8,42,11
+413,frame_000413.png,score_right,122,11,8,8,122,11
+# Frame 414, Action: fire, Step: 0
+414,frame_000414.png,player_paddle,142,103,10,30,142,103
+414,frame_000414.png,score_left,42,11,8,8,42,11
+414,frame_000414.png,score_right,122,11,8,8,122,11
+# Frame 415, Action: fire, Step: 1
+415,frame_000415.png,player_paddle,142,103,10,30,142,103
+415,frame_000415.png,score_left,42,11,8,8,42,11
+415,frame_000415.png,score_right,122,11,8,8,122,11
+# Frame 416, Action: fire, Step: 2
+416,frame_000416.png,player_paddle,142,103,10,30,142,103
+416,frame_000416.png,score_left,42,11,8,8,42,11
+416,frame_000416.png,score_right,122,11,8,8,122,11
+# Frame 417, Action: fire, Step: 3
+417,frame_000417.png,player_paddle,142,103,10,30,142,103
+417,frame_000417.png,score_left,42,11,8,8,42,11
+417,frame_000417.png,score_right,122,11,8,8,122,11
+# Frame 418, Action: fire, Step: 4
+418,frame_000418.png,player_paddle,142,103,10,30,142,103
+418,frame_000418.png,score_left,42,11,8,8,42,11
+418,frame_000418.png,score_right,122,11,8,8,122,11
+# Frame 419, Action: fire, Step: 5
+419,frame_000419.png,player_paddle,142,103,10,30,142,103
+419,frame_000419.png,score_left,42,11,8,8,42,11
+419,frame_000419.png,score_right,122,11,8,8,122,11
+# Frame 420, Action: fire, Step: 6
+420,frame_000420.png,player_paddle,142,103,10,30,142,103
+420,frame_000420.png,score_left,42,11,8,8,42,11
+420,frame_000420.png,score_right,122,11,8,8,122,11
+# Frame 421, Action: fire, Step: 7
+421,frame_000421.png,player_paddle,142,103,10,30,142,103
+421,frame_000421.png,score_left,42,11,8,8,42,11
+421,frame_000421.png,score_right,122,11,8,8,122,11
+# Frame 422, Action: fire, Step: 8
+422,frame_000422.png,player_paddle,142,103,10,30,142,103
+422,frame_000422.png,score_left,42,11,8,8,42,11
+422,frame_000422.png,score_right,122,11,8,8,122,11
+# Frame 423, Action: fire, Step: 9
+423,frame_000423.png,player_paddle,142,103,10,30,142,103
+423,frame_000423.png,score_left,42,11,8,8,42,11
+423,frame_000423.png,score_right,122,11,8,8,122,11
+# Frame 424, Action: fire, Step: 10
+424,frame_000424.png,player_paddle,142,103,10,30,142,103
+424,frame_000424.png,score_left,42,11,8,8,42,11
+424,frame_000424.png,score_right,122,11,8,8,122,11
+# Frame 425, Action: fire, Step: 11
+425,frame_000425.png,player_paddle,142,103,10,30,142,103
+425,frame_000425.png,score_left,42,11,8,8,42,11
+425,frame_000425.png,score_right,122,11,8,8,122,11
+# Frame 426, Action: fire, Step: 12
+426,frame_000426.png,player_paddle,142,103,10,30,142,103
+426,frame_000426.png,score_left,42,11,8,8,42,11
+426,frame_000426.png,score_right,122,11,8,8,122,11
+# Frame 427, Action: fire, Step: 13
+427,frame_000427.png,player_paddle,142,103,10,30,142,103
+427,frame_000427.png,score_left,42,11,8,8,42,11
+427,frame_000427.png,score_right,122,11,8,8,122,11
+# Frame 428, Action: fire, Step: 14
+428,frame_000428.png,player_paddle,142,103,10,30,142,103
+428,frame_000428.png,score_left,42,11,8,8,42,11
+428,frame_000428.png,score_right,122,11,8,8,122,11
+# Frame 429, Action: fire, Step: 15
+429,frame_000429.png,player_paddle,142,103,10,30,142,103
+429,frame_000429.png,score_left,42,11,8,8,42,11
+429,frame_000429.png,score_right,122,11,8,8,122,11
+# Frame 430, Action: fire, Step: 16
+430,frame_000430.png,player_paddle,142,103,10,30,142,103
+430,frame_000430.png,score_left,42,11,8,8,42,11
+430,frame_000430.png,score_right,122,11,8,8,122,11
+# Frame 431, Action: fire, Step: 17
+431,frame_000431.png,player_paddle,142,103,10,30,142,103
+431,frame_000431.png,enemy_paddle,18,122,10,30,18,122
+431,frame_000431.png,ball,78,118,4,4,78,118
+431,frame_000431.png,score_left,42,11,8,8,42,11
+431,frame_000431.png,score_right,122,11,8,8,122,11
+# Frame 432, Action: fire, Step: 0
+432,frame_000432.png,player_paddle,142,103,10,30,142,103
+432,frame_000432.png,score_left,42,11,8,8,42,11
+432,frame_000432.png,score_right,122,11,8,8,122,11
+# Frame 433, Action: fire, Step: 1
+433,frame_000433.png,player_paddle,142,103,10,30,142,103
+433,frame_000433.png,score_left,42,11,8,8,42,11
+433,frame_000433.png,score_right,122,11,8,8,122,11
+# Frame 434, Action: fire, Step: 2
+434,frame_000434.png,player_paddle,142,103,10,30,142,103
+434,frame_000434.png,score_left,42,11,8,8,42,11
+434,frame_000434.png,score_right,122,11,8,8,122,11
+# Frame 435, Action: fire, Step: 3
+435,frame_000435.png,player_paddle,142,103,10,30,142,103
+435,frame_000435.png,score_left,42,11,8,8,42,11
+435,frame_000435.png,score_right,122,11,8,8,122,11
+# Frame 436, Action: fire, Step: 4
+436,frame_000436.png,player_paddle,142,103,10,30,142,103
+436,frame_000436.png,score_left,42,11,8,8,42,11
+436,frame_000436.png,score_right,122,11,8,8,122,11
+# Frame 437, Action: fire, Step: 5
+437,frame_000437.png,player_paddle,142,103,10,30,142,103
+437,frame_000437.png,score_left,42,11,8,8,42,11
+437,frame_000437.png,score_right,122,11,8,8,122,11
+# Frame 438, Action: fire, Step: 6
+438,frame_000438.png,player_paddle,142,103,10,30,142,103
+438,frame_000438.png,score_left,42,11,8,8,42,11
+438,frame_000438.png,score_right,122,11,8,8,122,11
+# Frame 439, Action: fire, Step: 7
+439,frame_000439.png,player_paddle,142,103,10,30,142,103
+439,frame_000439.png,score_left,42,11,8,8,42,11
+439,frame_000439.png,score_right,122,11,8,8,122,11
+# Frame 440, Action: fire, Step: 8
+440,frame_000440.png,player_paddle,142,103,10,30,142,103
+440,frame_000440.png,score_left,42,11,8,8,42,11
+440,frame_000440.png,score_right,122,11,8,8,122,11
+# Frame 441, Action: fire, Step: 9
+441,frame_000441.png,player_paddle,142,103,10,30,142,103
+441,frame_000441.png,score_left,42,11,8,8,42,11
+441,frame_000441.png,score_right,122,11,8,8,122,11
+# Frame 442, Action: fire, Step: 10
+442,frame_000442.png,player_paddle,142,103,10,30,142,103
+442,frame_000442.png,score_left,42,11,8,8,42,11
+442,frame_000442.png,score_right,122,11,8,8,122,11
+# Frame 443, Action: fire, Step: 11
+443,frame_000443.png,player_paddle,142,103,10,30,142,103
+443,frame_000443.png,score_left,42,11,8,8,42,11
+443,frame_000443.png,score_right,122,11,8,8,122,11
+# Frame 444, Action: fire, Step: 12
+444,frame_000444.png,player_paddle,142,103,10,30,142,103
+444,frame_000444.png,score_left,42,11,8,8,42,11
+444,frame_000444.png,score_right,122,11,8,8,122,11
+# Frame 445, Action: fire, Step: 13
+445,frame_000445.png,player_paddle,142,103,10,30,142,103
+445,frame_000445.png,score_left,42,11,8,8,42,11
+445,frame_000445.png,score_right,122,11,8,8,122,11
+# Frame 446, Action: fire, Step: 14
+446,frame_000446.png,player_paddle,142,103,10,30,142,103
+446,frame_000446.png,score_left,42,11,8,8,42,11
+446,frame_000446.png,score_right,122,11,8,8,122,11
+# Frame 447, Action: fire, Step: 15
+447,frame_000447.png,player_paddle,142,103,10,30,142,103
+447,frame_000447.png,score_left,42,11,8,8,42,11
+447,frame_000447.png,score_right,122,11,8,8,122,11
+# Frame 448, Action: fire, Step: 16
+448,frame_000448.png,player_paddle,142,103,10,30,142,103
+448,frame_000448.png,score_left,42,11,8,8,42,11
+448,frame_000448.png,score_right,122,11,8,8,122,11
+# Frame 449, Action: fire, Step: 17
+449,frame_000449.png,player_paddle,142,103,10,30,142,103
+449,frame_000449.png,score_left,42,11,8,8,42,11
+449,frame_000449.png,score_right,122,11,8,8,122,11
+# Frame 450, Action: fire, Step: 18
+450,frame_000450.png,player_paddle,142,103,10,30,142,103
+450,frame_000450.png,score_left,42,11,8,8,42,11
+450,frame_000450.png,score_right,122,11,8,8,122,11
+# Frame 451, Action: fire, Step: 19
+451,frame_000451.png,player_paddle,142,103,10,30,142,103
+451,frame_000451.png,enemy_paddle,18,122,10,30,18,122
+451,frame_000451.png,ball,79,117,4,4,79,117
+451,frame_000451.png,score_left,42,11,8,8,42,11
+451,frame_000451.png,score_right,122,11,8,8,122,11
+# Frame 452, Action: fire, Step: 0
+452,frame_000452.png,player_paddle,142,103,10,30,142,103
+452,frame_000452.png,score_left,42,11,8,8,42,11
+452,frame_000452.png,score_right,122,11,8,8,122,11
+# Frame 453, Action: fire, Step: 1
+453,frame_000453.png,player_paddle,142,103,10,30,142,103
+453,frame_000453.png,score_left,42,11,8,8,42,11
+453,frame_000453.png,score_right,122,11,8,8,122,11
+# Frame 454, Action: fire, Step: 2
+454,frame_000454.png,player_paddle,142,103,10,30,142,103
+454,frame_000454.png,score_left,42,11,8,8,42,11
+454,frame_000454.png,score_right,122,11,8,8,122,11
+# Frame 455, Action: fire, Step: 3
+455,frame_000455.png,player_paddle,142,103,10,30,142,103
+455,frame_000455.png,score_left,42,11,8,8,42,11
+455,frame_000455.png,score_right,122,11,8,8,122,11
+# Frame 456, Action: fire, Step: 4
+456,frame_000456.png,player_paddle,142,103,10,30,142,103
+456,frame_000456.png,score_left,42,11,8,8,42,11
+456,frame_000456.png,score_right,122,11,8,8,122,11
+# Frame 457, Action: fire, Step: 5
+457,frame_000457.png,player_paddle,142,103,10,30,142,103
+457,frame_000457.png,score_left,42,11,8,8,42,11
+457,frame_000457.png,score_right,122,11,8,8,122,11
+# Frame 458, Action: fire, Step: 6
+458,frame_000458.png,player_paddle,142,103,10,30,142,103
+458,frame_000458.png,score_left,42,11,8,8,42,11
+458,frame_000458.png,score_right,122,11,8,8,122,11
+# Frame 459, Action: fire, Step: 7
+459,frame_000459.png,player_paddle,142,103,10,30,142,103
+459,frame_000459.png,score_left,42,11,8,8,42,11
+459,frame_000459.png,score_right,122,11,8,8,122,11
+# Frame 460, Action: fire, Step: 8
+460,frame_000460.png,player_paddle,142,103,10,30,142,103
+460,frame_000460.png,score_left,42,11,8,8,42,11
+460,frame_000460.png,score_right,122,11,8,8,122,11
+# Frame 461, Action: fire, Step: 9
+461,frame_000461.png,player_paddle,142,103,10,30,142,103
+461,frame_000461.png,score_left,42,11,8,8,42,11
+461,frame_000461.png,score_right,122,11,8,8,122,11
+# Frame 462, Action: fire, Step: 10
+462,frame_000462.png,player_paddle,142,103,10,30,142,103
+462,frame_000462.png,score_left,42,11,8,8,42,11
+462,frame_000462.png,score_right,122,11,8,8,122,11
+# Frame 463, Action: fire, Step: 11
+463,frame_000463.png,player_paddle,142,103,10,30,142,103
+463,frame_000463.png,score_left,42,11,8,8,42,11
+463,frame_000463.png,score_right,122,11,8,8,122,11
+# Frame 464, Action: fire, Step: 12
+464,frame_000464.png,player_paddle,142,103,10,30,142,103
+464,frame_000464.png,score_left,42,11,8,8,42,11
+464,frame_000464.png,score_right,122,11,8,8,122,11
+# Frame 465, Action: fire, Step: 13
+465,frame_000465.png,player_paddle,142,103,10,30,142,103
+465,frame_000465.png,score_left,42,11,8,8,42,11
+465,frame_000465.png,score_right,122,11,8,8,122,11
+# Frame 466, Action: fire, Step: 14
+466,frame_000466.png,player_paddle,142,103,10,30,142,103
+466,frame_000466.png,score_left,42,11,8,8,42,11
+466,frame_000466.png,score_right,122,11,8,8,122,11
+# Frame 467, Action: fire, Step: 15
+467,frame_000467.png,player_paddle,142,103,10,30,142,103
+467,frame_000467.png,score_left,42,11,8,8,42,11
+467,frame_000467.png,score_right,122,11,8,8,122,11
+# Frame 468, Action: fire, Step: 16
+468,frame_000468.png,player_paddle,142,103,10,30,142,103
+468,frame_000468.png,score_left,42,11,8,8,42,11
+468,frame_000468.png,score_right,122,11,8,8,122,11
+# Frame 469, Action: fire, Step: 17
+469,frame_000469.png,player_paddle,142,103,10,30,142,103
+469,frame_000469.png,score_left,42,11,8,8,42,11
+469,frame_000469.png,score_right,122,11,8,8,122,11
+# Frame 470, Action: fire, Step: 18
+470,frame_000470.png,player_paddle,142,103,10,30,142,103
+470,frame_000470.png,enemy_paddle,18,122,10,30,18,122
+470,frame_000470.png,ball,78,118,4,4,78,118
+470,frame_000470.png,score_left,42,11,8,8,42,11
+470,frame_000470.png,score_right,122,11,8,8,122,11
+# Frame 471, Action: noop, Step: 19
+471,frame_000471.png,player_paddle,142,103,10,30,142,103
+471,frame_000471.png,enemy_paddle,18,126,10,30,18,126
+471,frame_000471.png,ball,75,121,4,4,75,121
+471,frame_000471.png,score_left,42,11,8,8,42,11
+471,frame_000471.png,score_right,122,11,8,8,122,11
+# Frame 472, Action: fire, Step: 0
+472,frame_000472.png,player_paddle,142,103,10,30,142,103
+472,frame_000472.png,score_left,42,11,8,8,42,11
+472,frame_000472.png,score_right,122,11,8,8,122,11
+# Frame 473, Action: fire, Step: 1
+473,frame_000473.png,player_paddle,142,103,10,30,142,103
+473,frame_000473.png,score_left,42,11,8,8,42,11
+473,frame_000473.png,score_right,122,11,8,8,122,11
+# Frame 474, Action: fire, Step: 2
+474,frame_000474.png,player_paddle,142,103,10,30,142,103
+474,frame_000474.png,score_left,42,11,8,8,42,11
+474,frame_000474.png,score_right,122,11,8,8,122,11
+# Frame 475, Action: fire, Step: 3
+475,frame_000475.png,player_paddle,142,103,10,30,142,103
+475,frame_000475.png,score_left,42,11,8,8,42,11
+475,frame_000475.png,score_right,122,11,8,8,122,11
+# Frame 476, Action: fire, Step: 4
+476,frame_000476.png,player_paddle,142,103,10,30,142,103
+476,frame_000476.png,score_left,42,11,8,8,42,11
+476,frame_000476.png,score_right,122,11,8,8,122,11
+# Frame 477, Action: fire, Step: 5
+477,frame_000477.png,player_paddle,142,103,10,30,142,103
+477,frame_000477.png,score_left,42,11,8,8,42,11
+477,frame_000477.png,score_right,122,11,8,8,122,11
+# Frame 478, Action: fire, Step: 6
+478,frame_000478.png,player_paddle,142,103,10,30,142,103
+478,frame_000478.png,score_left,42,11,8,8,42,11
+478,frame_000478.png,score_right,122,11,8,8,122,11
+# Frame 479, Action: fire, Step: 7
+479,frame_000479.png,player_paddle,142,103,10,30,142,103
+479,frame_000479.png,score_left,42,11,8,8,42,11
+479,frame_000479.png,score_right,122,11,8,8,122,11
+# Frame 480, Action: fire, Step: 8
+480,frame_000480.png,player_paddle,142,103,10,30,142,103
+480,frame_000480.png,score_left,42,11,8,8,42,11
+480,frame_000480.png,score_right,122,11,8,8,122,11
+# Frame 481, Action: fire, Step: 9
+481,frame_000481.png,player_paddle,142,103,10,30,142,103
+481,frame_000481.png,score_left,42,11,8,8,42,11
+481,frame_000481.png,score_right,122,11,8,8,122,11
+# Frame 482, Action: fire, Step: 10
+482,frame_000482.png,player_paddle,142,103,10,30,142,103
+482,frame_000482.png,score_left,42,11,8,8,42,11
+482,frame_000482.png,score_right,122,11,8,8,122,11
+# Frame 483, Action: fire, Step: 11
+483,frame_000483.png,player_paddle,142,103,10,30,142,103
+483,frame_000483.png,score_left,42,11,8,8,42,11
+483,frame_000483.png,score_right,122,11,8,8,122,11
+# Frame 484, Action: fire, Step: 12
+484,frame_000484.png,player_paddle,142,103,10,30,142,103
+484,frame_000484.png,score_left,42,11,8,8,42,11
+484,frame_000484.png,score_right,122,11,8,8,122,11
+# Frame 485, Action: fire, Step: 13
+485,frame_000485.png,player_paddle,142,103,10,30,142,103
+485,frame_000485.png,score_left,42,11,8,8,42,11
+485,frame_000485.png,score_right,122,11,8,8,122,11
+# Frame 486, Action: fire, Step: 14
+486,frame_000486.png,player_paddle,142,103,10,30,142,103
+486,frame_000486.png,score_left,42,11,8,8,42,11
+486,frame_000486.png,score_right,122,11,8,8,122,11
+# Frame 487, Action: fire, Step: 15
+487,frame_000487.png,player_paddle,142,103,10,30,142,103
+487,frame_000487.png,score_left,42,11,8,8,42,11
+487,frame_000487.png,score_right,122,11,8,8,122,11
+# Frame 488, Action: fire, Step: 16
+488,frame_000488.png,player_paddle,142,103,10,30,142,103
+488,frame_000488.png,score_left,42,11,8,8,42,11
+488,frame_000488.png,score_right,122,11,8,8,122,11
+# Frame 489, Action: fire, Step: 17
+489,frame_000489.png,player_paddle,142,103,10,30,142,103
+489,frame_000489.png,score_left,42,11,8,8,42,11
+489,frame_000489.png,score_right,122,11,8,8,122,11
+# Frame 490, Action: fire, Step: 18
+490,frame_000490.png,player_paddle,142,103,10,30,142,103
+490,frame_000490.png,score_left,42,11,8,8,42,11
+490,frame_000490.png,score_right,122,11,8,8,122,11
+# Frame 491, Action: fire, Step: 19
+491,frame_000491.png,player_paddle,142,103,10,30,142,103
+491,frame_000491.png,enemy_paddle,18,122,10,30,18,122
+491,frame_000491.png,ball,78,118,4,4,78,118
+491,frame_000491.png,score_left,42,11,8,8,42,11
+491,frame_000491.png,score_right,122,11,8,8,122,11
+# Frame 492, Action: noop, Step: 20
+492,frame_000492.png,player_paddle,142,103,10,30,142,103
+492,frame_000492.png,enemy_paddle,18,124,10,30,18,124
+492,frame_000492.png,ball,76,120,4,4,76,120
+492,frame_000492.png,score_left,42,11,8,8,42,11
+492,frame_000492.png,score_right,122,11,8,8,122,11
+# Frame 493, Action: noop, Step: 21
+493,frame_000493.png,player_paddle,142,103,10,30,142,103
+493,frame_000493.png,enemy_paddle,18,128,10,30,18,128
+493,frame_000493.png,ball,72,124,4,4,72,124
+493,frame_000493.png,score_left,42,11,8,8,42,11
+493,frame_000493.png,score_right,122,11,8,8,122,11
+# Frame 494, Action: noop, Step: 22
+494,frame_000494.png,player_paddle,142,103,10,30,142,103
+494,frame_000494.png,enemy_paddle,18,130,10,30,18,130
+494,frame_000494.png,ball,70,126,4,4,70,126
+494,frame_000494.png,score_left,42,11,8,8,42,11
+494,frame_000494.png,score_right,122,11,8,8,122,11
+# Frame 495, Action: noop, Step: 23
+495,frame_000495.png,player_paddle,142,103,10,30,142,103
+495,frame_000495.png,enemy_paddle,18,134,10,30,18,134
+495,frame_000495.png,ball,66,130,4,4,66,130
+495,frame_000495.png,score_left,42,11,8,8,42,11
+495,frame_000495.png,score_right,122,11,8,8,122,11

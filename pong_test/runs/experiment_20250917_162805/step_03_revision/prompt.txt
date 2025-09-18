@@ -1,0 +1,209 @@
+ You are an AI agent that must come up with a model of the game you are playing. This model you are making of the game
+will be a python program that captures the logic and mechanics of the game. You have begun this world model, but it did not capture everything. 
+Below is your current world model, the action space, and the state transition that your transition model handled wrong.
+The state transition (inital state, action, next state) will be followed by a section detailing your prediction errors.
+If the prediction errors is blank it means your world model correctly modeled that transition.
+
+In order to craft the world model and get this state transition you explored your environment with an EXPLORATION PLAN.
+The state transitions belonging to an EXPLORATION PLAN will be written below it.
+Note this exploration is a high level plan and the transitions related to it
+are carrying out this high level plan by 
+executing actions in the ACTION SPACE ['noop', 'fire', 'right', 'left', 'rightfire', 'leftfire']
+
+Pay close attention to what is involved and modify your transition model to be able to handle this.
+
+DESCRIPTION OF DOMAIN:
+
+This domain is a game where you move around a red agent but cannot move onto walls. 
+
+You need to face in the direction of an item
+and stand one square adjacent from it in order to pick it up and have it in your inventory. You can only hold one item at a time.
+You can pickup boxes, balls, keys. 
+
+Doors can be opened in this game by standing adjacent one square from them and facing towards them.
+Once a door is opened you can stand on the same position as it and move past it. 
+
+You can open locked doors by having the corresponding color key for that door. Once you use the key to unlock the door,
+the key will remain in your inventory.
+
+Once a door is opened it will remain on the map and be an opened door.
+
+For example, consider a map where there is a closed_red_door (this means its not locked). 
+When you toggle it, it will turn into an open_red_door
+
+You may also encounter a locked_red_door and when you toggle it with a key in your inventory it'll become an open_red_door
+
+If you choose to drop an item from your inventory you will drop it in the position right in front of you in the direction you are facing.
+You cannot drop an item in front of you if another item is in that square.
+
+Furthermore, you SHOULD NOT DROP the ITEM any 1 square away from a door way or else it will block it.
+
+Another thing to note is that boxes can be picked up AND they can also be toggled. If you toggle a box, the corresponding
+color key will appear in that square and the box will be removed from the state.
+
+For example if you toggle a box, then a key will appear at the same coordinate that the box is at. 
+
+However, this ONLY happens when there is a locked door of that color and a key of the same color as the locked door does NOT exist in the state.
+
+Effectively, you can think of the box turning into the corresponding key in a way.
+
+So for example purple_box at [2, 5] will turn into purple_key at [2, 5] replacing that in that state
+
+or in other words purple_box will be deleted from the map completely.
+
+purple_box -> purple_key
+
+
+NOTES:
+
+Feel free to also explain your thinking outside of the markup tags, but know that I will only use the code inside the markup tags. 
+
+The exploration plans are set up to help guide you to your overall goal. 
+
+You can replace the keys of any state dictionary items that transform!
+
+
+YOUR OVERALL GOAL TO WIN THIS LEVEL:
+
+Score points in Pong
+
+ACTION SPACE:
+
+['noop', 'fire', 'right', 'left', 'rightfire', 'leftfire']
+
+CURRENT WORLD MODEL:
+
+# make sure to include these import statements
+from predicates import *
+from copy import deepcopy
+from utils import directions
+
+def transition_model(state, action):
+    # Create a deep copy of the state to avoid mutating the original state directly
+    new_state = deepcopy(state)
+    
+    # Define max_x assuming it's part of the state or a constant
+    max_x = state.get('max_x', 200)  # Replace 200 with the actual maximum x value if known
+
+    # Initialize missing elements based on observed state transitions if not present
+    if not new_state['player_paddle']:
+        new_state['player_paddle'] = [[142, 112]]  # Updated initialization based on observed data
+    if not new_state['enemy_paddle']:
+        new_state['enemy_paddle'] = [[18, 128]]  # Updated initialization based on observed data
+    if not new_state['ball']:
+        new_state['ball'] = [[72, 124]]  # Updated initialization based on observed data
+    if not new_state['score_left']:
+        new_state['score_left'] = [[42, 11]]  # Arbitrary initialization based on observed data
+    if not new_state['score_right']:
+        new_state['score_right'] = [[122, 11]]  # Arbitrary initialization based on observed data
+
+    # Update frame count to simulate time progression
+    new_state['frame'] = state.get('frame', 0) + 1  # Adjusted based on observed state
+
+    # Movement deltas
+    player_move_delta = 0
+    enemy_move_delta = 0
+    ball_x_delta = -2  # From observed data, ball moves left by 2
+    ball_y_delta = 4   # From observed data, ball moves down by 4
+
+    # Example handling of action logic
+    if action == 'left':
+        # Move player paddle to the left, if possible
+        if new_state['player_paddle']:
+            new_state['player_paddle'][0][0] -= 1  # Move left by one unit
+    elif action == 'right':
+        # Move player paddle to the right, if possible
+        if new_state['player_paddle']:
+            new_state['player_paddle'][0][0] += 1  # Move right by one unit
+    elif action == 'fire':
+        # Logic to handle 'fire' (could be related to starting the ball movement)
+        # Ball movement logic is already handled by deltas
+        pass
+    elif action == 'noop':
+        # No operation, state remains unchanged
+        pass
+    elif action == 'leftfire':
+        # Combination of moving left and firing
+        if new_state['player_paddle']:
+            new_state['player_paddle'][0][0] -= 1  # Move left by one unit
+    elif action == 'rightfire':
+        # Combination of moving right and firing
+        if new_state['player_paddle']:
+            new_state['player_paddle'][0][0] += 1  # Move right by one unit
+
+    # Ensure player paddle stays within bounds
+    if new_state['player_paddle']:
+        player_x, player_y = new_state['player_paddle'][0]
+        player_x = max(0, min(player_x, max_x))  # Ensure x is within 0 and max_x
+        player_y += 10  # Observed movement increment
+        new_state['player_paddle'][0] = [player_x, player_y]
+
+    # Move the ball if it's initialized
+    if new_state['ball']:
+        ball_x, ball_y = new_state['ball'][0]
+        new_state['ball'][0] = [ball_x + ball_x_delta, ball_y + ball_y_delta]  # Adjust ball movement
+
+    # Move the enemy paddle if it's initialized
+    if new_state['enemy_paddle']:
+        enemy_x, enemy_y = new_state['enemy_paddle'][0]
+        enemy_y += 4  # Observed movement increment
+        new_state['enemy_paddle'][0] = [enemy_x, enemy_y]
+
+    # Handle score logic, ball movement, and collision (not detailed here)
+    # This would involve updating 'ball', 'score_left', and 'score_right' based on game rules
+
+    # Return the modified state
+    return new_state
+
+
+ERRORS FROM WORLD MODEL:
+
+Initial state: {'player_paddle': [], 'enemy_paddle': [], 'ball': [], 'score_left': [], 'score_right': [], 'walls': [], 'frame': 0, 'reward': 0, 'action_space': [0, 1, 2, 3, 4, 5]}
+Action: left
+Next state: {'player_paddle': [[142, 105]], 'enemy_paddle': [[18, 124]], 'ball': [[76, 120]], 'score_left': [[42, 11]], 'score_right': [[122, 11]], 'walls': [], 'frame': 20, 'reward': 0.0, 'action_space': [0, 1, 2, 3, 4, 5]}
+
+Your prediction errors:
+"enemy_paddle": predicted: [[18, 132]]
+"enemy_paddle": actual: [[18, 124]]
+
+"player_paddle": predicted: [[141, 122]]
+"player_paddle": actual: [[142, 105]]
+
+"frame": predicted: 1
+"frame": actual: 20
+
+"ball": predicted: [[70, 128]]
+"ball": actual: [[76, 120]]
+
+
+UTILS:
+
+directions = {
+    'left': [-1, 0],
+    'right': [1, 0],
+    'up': [0, 1],
+    'down': [0, -1],
+}
+
+
+RESPONSE FORMAT (make sure to include your code in markup tags):
+
+- Make sure that you return the correct state for example if you made a deepcopy of the state and modify the deep copy then return the new_state
+- If you modify the state directly then return the state instead of new_state
+- Try to generalize your world model. For example, do not just assume that all entities will be the same color in all variations
+- Your world model will be used in other variations where entities will be of different colors, but the principles should remain the same
+- For example, you can use string checks like .endswith or .beginswith instead of hardcoding a list of entities in your world model.
+
+```Python
+
+# make sure to include these import statements
+from predicates import *
+from copy import deepcopy
+from utils import directions
+
+def transition_model(state, action):
+
+
+        Return State
+
+```

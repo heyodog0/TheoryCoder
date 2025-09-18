@@ -5,6 +5,9 @@ from pathlib import Path
 from copy import deepcopy
 import json
 import os
+from dotenv import load_dotenv
+load_dotenv()  # Load environment variables from .env file
+
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 # from langchain.chat_models import ChatOpenAI
@@ -21,7 +24,7 @@ import re
 import ast
 from levelrunner import actor
 import inspect
-import utils
+# import utils  # Commenting out to avoid numpy circular import
 from preprocessing import *
 import openai
 from groq import Groq
@@ -40,6 +43,16 @@ import shutil
 
 import subprocess
 from subprocess import CalledProcessError
+
+# OCAtari Pong integration
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), 'ocatari_integration'))
+try:
+    from envs.pong_env import PongEnv
+    PONG_AVAILABLE = True
+except ImportError:
+    PONG_AVAILABLE = False
+    print("OCAtari Pong integration not available. Install OCAtari to use Pong.")
 
 initialize_world_model_prompt = \
 """You are an AI agent that must come up with a transition model of the game you are playing. 
@@ -401,7 +414,6 @@ Explanation for relating to world model correction: Explain how it can uncover t
 
 
 
-import sys
 # ensure your project root is first on sys.path
 proj_root = os.path.abspath(os.path.dirname(__file__))
 if proj_root in sys.path:
@@ -566,7 +578,7 @@ class TheoryCoderAgent:
             # self.llm_client = ChatOpenAI(model_name=language_model, temperature=temperature)
             print("hi")
         elif query_mode == 'openai_direct':
-            self.llm_client = openai
+            self.llm_client = openai.OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
         elif query_mode == 'groq':
             self.llm_client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
         else:
@@ -675,8 +687,15 @@ class TheoryCoderAgent:
 
 
     def load_utils(self):
-        # Load the 'directions' from utils.py as a string
-        directions_code = inspect.getsource(utils)  # Get the source code of utils.py
+        # Load the 'directions' as a string (avoid importing utils due to numpy circular import)
+        directions_code = """
+directions = {
+    'left': [-1, 0],
+    'right': [1, 0],
+    'up': [0, -1],
+    'down': [0, 1],
+}
+"""
         self.runtime_vars['utils'] = directions_code  # Store it in runtime_vars as a string
 
     def _load_plans(self):
@@ -1557,9 +1576,7 @@ class TheoryCoderAgent:
 
 
             actionlist, state = actor(self.domain_file, subplan_exploratory, state, max_iterations=None, debug_callback=self._call_model_debug, level=None) #max its 2k original
-            actions.extend(actionlist)
-
-            return actions
+            return actionlist
         
         else:
             actions = []
@@ -1574,7 +1591,7 @@ class TheoryCoderAgent:
                 importlib.reload(worldmodel)
                 importlib.reload(planner)
                 importlib.reload(levelrunner)
-                importlib.reload(utils)
+                # importlib.reload(utils)  # Commented out to avoid numpy issues
 
                 
                 for subplan in self.plans.get(str(self.current_level), []):
@@ -2063,15 +2080,10 @@ class TheoryCoderAgent:
 
     def _get_game_name(self):
         """
-        Turn self.engine’s class into the folder‐name you want under tc_game/.
+        Turn self.engine's class into the folder‐name you want under tc_game/.
         """
         from games import BabaIsYou, LavaGrid
         from babyai_env import BabyAI
-        # from boulderdash2_env import Boulderdash2Env
-        # from pb1_env import pb1env
-        # from sokoban_env import SokobanEnv
-        # from clusterbox_env import ClusterboxEnv
-
 
         if isinstance(self.engine, BabaIsYou):
             return "baba"
@@ -2079,14 +2091,8 @@ class TheoryCoderAgent:
             return "lava"
         elif isinstance(self.engine, BabyAI):
             return "babyai"
-        elif isinstance(self.engine, Boulderdash2Env):
-            return "boulderdash2"
-        elif isinstance(self.engine, pb1env):
-            return "pb1"
-        elif isinstance(self.engine, SokobanEnv):
-            return "sokoban"
-        elif isinstance(self.engine, ClusterboxEnv):
-            return "clusterbox"
+        elif PONG_AVAILABLE and isinstance(self.engine, PongEnv):
+            return "pong"
         else:
             # fallback to the class name
             return self.engine.__class__.__name__.lower()
@@ -2096,6 +2102,16 @@ class TheoryCoderAgent:
         self.engine = engine
         self.current_level = self.engine.level_id  # Or any other method to determine the level
 
+        # Initialize level statistics for single-level runs
+        level_key = f"{self.engine.level_set}_{self.current_level}"
+        self.level_statistics[level_key] = {
+            "attempts": 0,
+            "revisions": 0,
+            "debugs": 0,
+            "explorations": 0,
+            "status": "running",
+            "first_letters": None
+        }
 
 
         # --- insert per‐game directory setup here ---
@@ -2142,7 +2158,7 @@ class TheoryCoderAgent:
 
             # Extract the original state immediately after reset
             initial_state = deepcopy(self.engine.get_obs())
-
+            # breakpoint()
             if isinstance(self.engine, BabaIsYou):
                 initial_state = process_state_baba(initial_state)
 
@@ -2170,8 +2186,10 @@ class TheoryCoderAgent:
 
                 # If the world model is not empty, proceed with the hierarchical planner
                 mode = self._sample_planner_mode()  # Determine planner mode (explore/exploit)
+                
                 plan = self._hierarchical_planner(mode) 
                 print("subplans from init model:", plan)
+                    
                 self.reset(keep_model=True)
                 model_was_revised = True
 
@@ -2232,9 +2250,8 @@ class TheoryCoderAgent:
                 mode = self._sample_planner_mode()  # Determine planner mode (explore/exploit)
                 plan = self._hierarchical_planner(mode) 
                 for actions in plan:
-                    self.step_env(action)
-                    first_letters += action[0]  # Collect the first letters of each action
-
+                    self.step_env(actions)  # Fixed: use 'actions' not 'action'
+                    first_letters += actions[0]  # Collect the first letters of each action
 
                     # Exit if agent won
                     if self.engine.won or (self.current_level == 6 and first_letters == 'rrruuu'):
@@ -2243,13 +2260,8 @@ class TheoryCoderAgent:
                         self.level_statistics[f"{self.engine.level_set}_{self.current_level}"]["first_letters"] = first_letters
                         self.level_statistics[f"{self.engine.level_set}_{self.current_level}"]["revisions"] = revision_count
                         self.level_statistics[f"{self.engine.level_set}_{self.current_level}"]["debugs"] = debug_count
-                        print(first_letters)
-
-                            # self.engine.save_screen(self.logger.experiment_dir + 'level_won')
-                        # self.engine.save_screen(f"{self.logger.experiment_dir}/{self.current_level}_{attempt_count}.png")
-                        # self.engine.save_screen()
-
-
+                        print(f"Level won with solution: {first_letters}")
+                        print("Stopping execution - level completed successfully!")
                         return True
 
                     # Check if the agent lost (e.g., died or failed critically)
@@ -2275,7 +2287,12 @@ class TheoryCoderAgent:
                 # exploratory_plans = self.propose_exploratory_plans(initial_state, self.domain_file)
                 # print(exploratory_plans)
                 # pruned_plans = self.prune_exploratory_plans(exploratory_plans)
-                pruned_plans = ["collect_diamond diamond1","collect_diamond diamond2","collect_diamond diamond3","collect_diamond diamond4","collect_diamond diamond5","collect_diamond diamond6","collect_diamond diamond7","collect_diamond diamond8","collect_diamond diamond9","escape_via_exit avatar exitdoor"]
+                # For Pong, use actual actions instead of diamond collection
+                if PONG_AVAILABLE and isinstance(self.engine, PongEnv):
+                    # Use the action names from the PDDL domain
+                    pruned_plans = ["noop", "fire", "right", "left", "rightfire", "leftfire"]
+                else:
+                    pruned_plans = ["collect_diamond diamond1","collect_diamond diamond2","collect_diamond diamond3","collect_diamond diamond4","collect_diamond diamond5","collect_diamond diamond6","collect_diamond diamond7","collect_diamond diamond8","collect_diamond diamond9","escape_via_exit avatar exitdoor"]
                 print("pruned automatically", pruned_plans)
 
 
@@ -2306,23 +2323,24 @@ class TheoryCoderAgent:
                         self.reset(keep_model=True)
                         first_letters = ''  # Reset first_letters for each exploratory plan
 
-                        subplans = self._hierarchical_planner(mode="explore_collision", subplan_exploratory=subplan)
+                actions = self._hierarchical_planner(mode="explore_collision", subplan_exploratory=subplan)
 
-                        for subplan, actions in subplans:
-                            for action in actions:
-                                self.step_env(action)
-                                first_letters += action[0]  # Collect the first letters of each action
+                for action in actions:
+                    self.step_env(action)
+                    first_letters += action[0]  # Collect the first letters of each action
 
-                        
+                    # Perform model revision after exploration
+                    print(f"Revising the world model after exploration...")
+                    examples, error_count = self._choose_synthesis_examples()
 
-                        # Perform model revision after every collision attempt
-                        print(f"Revising the model after subplan: {subplan}")
-                        examples, error_count = self._choose_synthesis_examples(exploratory_plan=subplan)
+                    if isinstance(self.engine, BabyAI):
+                        mission = self.engine.mission
+                    elif PONG_AVAILABLE and isinstance(self.engine, PongEnv):
+                        mission = "Score points in Pong"
+                    else:
+                        mission = "Complete the level"
 
-                        if isinstance(self.engine, BabyAI):
-                            mission = self.engine.mission
-
-                        if self._do_revise_model(error_count):
+                    if self._do_revise_model(error_count):
                             prompt = self.revise_world_model_prompt.format(
                                 actions_set=self.engine.actions_set,
                                 errors_from_world_model='\n\n'.join(examples),
@@ -2380,12 +2398,12 @@ class TheoryCoderAgent:
                             if self._do_revise_plan(error_count):
                                 self.runtime_vars['revise_plan'] = True
 
-                        revision_count += 1
+                    revision_count += 1
 
-                        if revision_count > max_revisions:
-                            print("Max model revisions reached. Exiting.")
-                            break
-                        print(f"Model revised {revision_count} times. Re-running.")
+                    if revision_count > max_revisions:
+                        print("Max model revisions reached. Exiting.")
+                        break
+                    print(f"Model revised {revision_count} times. Re-running.")
                     
                     exploratory_plan_index = (exploratory_plan_index + len(LLM_pruned_plans)) % len(LLM_pruned_plans)
                 else:
@@ -2418,8 +2436,16 @@ class TheoryCoderAgent:
 
                     # Perform model revision using the aggregated dataset
                     aggregated_examples = []
+                    total_errors = 0
                     for data in self.aggregated_dataset:
                         aggregated_examples.append(f"ERRORS FROM WORLD MODEL for EXPLORATORY PLAN {data['subplan']}:\n\n" + "\n\n".join(data['examples']))
+                        total_errors += data['error_count']
+
+                    # If no errors are found, the model is working well - no need to revise
+                    if total_errors == 0:
+                        print("World model working perfectly - no errors found. Skipping revision.")
+                        attempt_count += 1
+                        continue
 
 
 
@@ -2562,6 +2588,11 @@ First Letters: {first_letters}
                     self.engine = SokobanEnv(level_set=level_set, level_id=level_id)
                 elif args.game == 'clusterbox':
                     self.engine = ClusterboxEnv(level_set=level_set, level_id=level_id)
+                elif args.game == 'pong' and PONG_AVAILABLE:
+                    self.engine = PongEnv(level_set=level_set, level_id=level_id)
+                else:
+                    print(f"❌ Unsupported game: {args.game}")
+                    continue
                 
                 # Initialize level statistics
                 level_key = f"{level_set}_{level_id}"
@@ -2706,7 +2737,12 @@ if __name__ == '__main__':
             engine = CheesemazeEnv(level_set=list(level_sets.keys())[0], level_id=level_sets[list(level_sets.keys())[0]][0])
         elif args.game == 'clusterbox':
             engine = ClusterboxEnv(level_set=list(level_sets.keys())[0], level_id=level_sets[list(level_sets.keys())[0]][0])
-        
+        elif args.game == 'pong' and PONG_AVAILABLE:
+            engine = PongEnv(level_set=list(level_sets.keys())[0], level_id=level_sets[list(level_sets.keys())[0]][0])
+        else:
+            print(f"❌ Unsupported game: {args.game}")
+            print(f"Available games: baba, lava, babyai, boulderdash2, pb1, sokoban, labyrinth, cheesemaze, clusterbox, pong")
+            exit(1)
 
         agent.run(engine, max_attempts=args.max_attempts)
 

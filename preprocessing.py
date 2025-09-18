@@ -67,6 +67,10 @@ precondition_param_mapping = {
     "unstored_box": [["?box"]],  # No parameters needed beyond `state`
     "boxes_stuck": [[]],  # No parameters needed beyond `state`
 
+    # Pong / OCAtari zero-arity predicates (state-only)
+    "game_active": [[]],
+    "can_move": [[]],
+
 
 
 
@@ -407,7 +411,8 @@ def checker(state, predicates, operators):
 
 
     for predicate in predicates:
-        print(f"Evaluating predicate: {predicate}")
+        # Reduced verbosity - only print for debugging when needed
+        # print(f"Evaluating predicate: {predicate}")
 
 
         # if predicate == "blocking":
@@ -447,7 +452,7 @@ def checker(state, predicates, operators):
 
         # Call the predicate with state and resolved arguments
         result = predicate_functions[predicate_name](state, *args)
-        print(*args)
+        # print(*args)  # Reduced verbosity
         if is_negated:
             result = not result
 
@@ -469,7 +474,7 @@ def checker(state, predicates, operators):
 
 
 
-    print("Predicate evaluations:", results)
+    # print("Predicate evaluations:", results)  # Reduced verbosity
     return all(results)
 
 

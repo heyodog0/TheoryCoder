@@ -1,4 +1,5 @@
-from vgdl.rlenvironmentnonstatic import createRLInputGameFromStrings
+# from vgdl.rlenvironmentnonstatic import createRLInputGameFromStrings
+
 import os
 os.environ['SDL_AUDIODRIVER'] = 'dsp'
 import pygame

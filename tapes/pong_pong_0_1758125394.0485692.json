@@ -1,0 +1,29 @@
+[
+    {
+        "action": [
+            "leftfire",
+            [
+                "no-op"
+            ]
+        ],
+        "observation": {
+            "player_paddle": [],
+            "enemy_paddle": [],
+            "ball": [],
+            "score_left": [],
+            "score_right": [],
+            "walls": [],
+            "frame": 0,
+            "reward": 0,
+            "action_space": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "world_model": {}
+    }
+]

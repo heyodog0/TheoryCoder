@@ -1,0 +1,97 @@
+You are an AI agent that must come up with a model of the game you are playing. This model you are making of the game
+will be a python program that captures the logic and mechanics of the game. There has been an execution error in your world model.
+
+Please fix your world model code so that this execution error is fixed. You are given the action space, state format, world model as context.
+
+Try to make your world model as general as possible and account for possible cases that may arise in the future!
+Also DO NOT make changes to "won" in the state dictionary since that will happen outside of the world model.
+
+
+ACTION SPACE:
+
+['noop', 'fire', 'right', 'left', 'rightfire', 'leftfire']
+
+
+UTILS:
+
+directions = {
+    'left': [-1, 0],
+    'right': [1, 0],
+    'up': [0, 1],
+    'down': [0, -1],
+}
+
+CURRENT WORLD MODEL:
+
+# make sure to include these import statements
+from copy import deepcopy
+from utils import directions
+
+def transition_model(state, action):
+    # Create a deep copy of the state to avoid mutating the original state directly
+    new_state = deepcopy(state)
+
+    # Example handling of action logic
+    if action == 'left':
+        # Move player paddle to the left, if possible
+        if new_state['player_paddle']:
+            new_state['player_paddle'][0][0] -= 1  # Move left by one unit
+    elif action == 'right':
+        # Move player paddle to the right, if possible
+        if new_state['player_paddle']:
+            new_state['player_paddle'][0][0] += 1  # Move right by one unit
+    elif action == 'fire':
+        # Logic to handle 'fire' (could be related to starting the ball movement)
+        pass
+    elif action == 'noop':
+        # No operation, state remains unchanged
+        pass
+    elif action == 'leftfire':
+        # Combination of moving left and firing
+        if new_state['player_paddle']:
+            new_state['player_paddle'][0][0] -= 1  # Move left by one unit
+        # Additional logic for 'fire'
+        pass
+    elif action == 'rightfire':
+        # Combination of moving right and firing
+        if new_state['player_paddle']:
+            new_state['player_paddle'][0][0] += 1  # Move right by one unit
+        # Additional logic for 'fire'
+        pass
+
+    # Ensure player paddle stays within bounds (requires understanding boundary logic)
+    player_x, player_y = new_state['player_paddle'][0]
+    player_x = max(0, min(player_x, some_max_x))  # Replace some_max_x with actual max value
+    new_state['player_paddle'][0] = [player_x, player_y]
+
+    # Handle score logic, ball movement, and collision (not detailed here)
+    # This would involve updating 'ball', 'score_left', and 'score_right' based on game rules
+
+    # Return the modified state
+    return new_state
+
+DEBUG:
+
+state = {'player_paddle': [[142, 103]], 'enemy_paddle': [], 'ball': [], 'score_left': [[42, 11]], 'score_right': [[122, 11]], 'walls': [], 'frame': 0, 'reward': 0, 'action_space': [0, 1, 2, 3, 4, 5]}
+model(state, left)
+
+ERROR:
+
+name 'some_max_x' is not defined
+
+RESPONSE FORMAT (make sure to include your code in markup tags):
+
+```Python
+
+# make sure to include these import statements
+from predicates import *
+from copy import deepcopy
+from utils import directions
+
+def transition_model(state, action):
+
+
+	Return State
+
+```
+

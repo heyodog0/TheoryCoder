@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-CGYp6D3LrsKagDER7JIsRKmn8dugb",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "```python\nfrom copy import deepcopy\n\ndef transition_model(state, action):\n    new_state = deepcopy(state)\n    agent_pos = state['red_agent'][0]\n    agent_dir = state['agent_direction']\n    carrying = state['agent_carrying']\n    \n    # Calculate the position in front of the agent\n    front_pos = [agent_pos[0] + agent_dir[0], agent_pos[1] + agent_dir[1]]\n    \n    # Helper function to check if a position is within the walls\n    def is_position_within_walls(position):\n        return position not in state.get('grey_wall', [])\n\n    if action == 'forward':\n        # Move the agent forward if not blocked by a wall\n        if is_position_within_walls(front_pos):\n            new_state['red_agent'] = [front_pos]\n        return new_state\n\n    elif action == 'left':\n        # Rotate the agent's direction to the left\n        if agent_dir == [-1, 0]:  # Facing left\n            new_state['agent_direction'] = [0, 1]  # Face up\n        elif agent_dir == [1, 0]:  # Facing right\n            new_state['agent_direction'] = [0, -1]  # Face down\n        elif agent_dir == [0, 1]:  # Facing up\n            new_state['agent_direction'] = [1, 0]  # Face right\n        elif agent_dir == [0, -1]:  # Facing down\n            new_state['agent_direction'] = [-1, 0]  # Face left\n        return new_state\n\n    elif action == 'right':\n        # Rotate the agent's direction to the right\n        if agent_dir == [-1, 0]:  # Facing left\n            new_state['agent_direction'] = [0, -1]  # Face down\n        elif agent_dir == [1, 0]:  # Facing right\n            new_state['agent_direction'] = [0, 1]  # Face up\n        elif agent_dir == [0, 1]:  # Facing up\n            new_state['agent_direction'] = [-1, 0]  # Face left\n        elif agent_dir == [0, -1]:  # Facing down\n            new_state['agent_direction'] = [1, 0]  # Face right\n        return new_state\n\n    elif action == 'pickup':\n        # Attempt to pick up an item if one exists at the front position\n        if not carrying:  # Can only pick up if not already carrying something\n            for entity in state.keys():\n                if entity.endswith('_box') or entity.endswith('_ball') or entity.endswith('_key'):\n                    if front_pos in state[entity]:\n                        new_state['agent_carrying'] = [entity]\n                        new_state[entity].remove(front_pos)\n                        break\n        return new_state\n\n    elif action == 'drop':\n        # Attempt to drop the carried item at the front position\n        if carrying:\n            item_to_drop = carrying[0]\n            item_type = item_to_drop.split('_')[-1]\n            if front_pos not in [pos for key in state.keys() if key.endswith(item_type) for pos in state[key]]:\n                new_state['agent_carrying'] = []\n                if item_to_drop not in new_state:\n                    new_state[item_to_drop] = []\n                new_state[item_to_drop].append(front_pos)\n        return new_state\n\n    elif action == 'toggle':\n        # Toggle boxes and doors\n        for entity in state.keys():\n            if entity.endswith('_box') and front_pos in state[entity]:\n                color = entity.split('_')[0]\n                locked_door_key = f'locked_{color}_door'\n                corresponding_key = f'{color}_key'\n                \n                # Check for locked door and absence of key\n                if locked_door_key in state and corresponding_key not in state:\n                    new_state[corresponding_key] = [front_pos]\n                    new_state[entity].remove(front_pos)\n                break\n        return new_state\n\n    return state\n\n```",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": []
+      }
+    }
+  ],
+  "created": 1758063144,
+  "model": "gpt-4o-2024-08-06",
+  "object": "chat.completion",
+  "service_tier": "default",
+  "system_fingerprint": "fp_cbf1785567",
+  "usage": {
+    "completion_tokens": 859,
+    "prompt_tokens": 9991,
+    "total_tokens": 10850,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  }
+}

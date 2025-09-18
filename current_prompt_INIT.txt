@@ -1,0 +1,234 @@
+You are an AI agent that must come up with a transition model of the game you are playing. 
+
+A BFS low-level planner that will use your synthesized transition model to find the low-level actions that will allow you to win levels of the game.
+
+You are also given state transition after executing random actions that will help as well.
+Note that if there is no change returned after doing that action, it means that moving was prevented somehow such as by an obstacle. 
+
+The levels you start out with will be simpler but you will be adding on more and more as time progresses. 
+So try to make the transition model general and avoid hardcoding anything from the state dictionary keys. Feel free to infer the types of interactions that will occur in later levels. 
+Do not feel like you need to build the transition model for just this replay buffer. 
+
+DESCRIPTION OF DOMAIN:
+
+This domain is a game where you move around a red agent but cannot move onto walls. 
+
+You need to face in the direction of an item
+and stand one square adjacent from it in order to pick it up and have it in your inventory. You can only hold one item at a time.
+You can pickup boxes, balls, keys. 
+
+Doors can be opened in this game by standing adjacent one square from them and facing towards them.
+Once a door is opened you can stand on the same position as it and move past it. 
+
+You can open locked doors by having the corresponding color key for that door. Once you use the key to unlock the door,
+the key will remain in your inventory.
+
+Once a door is opened it will remain on the map and be an opened_ door.
+
+For example, consider a map where there is a closed_red_door (this means its not locked). 
+When you toggle it, it will turn into an open_red_door
+
+You may also encounter a locked_red_door and when you toggle it with a key in your inventory it'll become an open_red_door
+
+If you choose to drop an item from your inventory you will drop it in the position right in front of you in the direction you are facing.
+You cannot drop an item in front of you if another item is in that square.
+
+Furthermore, you SHOULD NOT DROP the ITEM any 1 square away from a door way or else it will block it.
+
+Another thing to note is that boxes can be picked up AND they can also be toggled. If you toggle a box, the corresponding
+color key will appear in that square and the box will be removed from the state.
+
+For example if you toggle a box, then a key will appear at the same coordinate that the box is at.
+
+However, this ONLY happens when there is a locked door of that color and a key of the same color as the locked door does NOT exist in the state.
+
+Effectively, you can think of the box turning into the corresponding key in a way. 
+
+So for example purple_box at [2, 5] will turn into purple_key at [2, 5] replacing that in that state 
+
+or in other words purple_box will be deleted from the map completely.
+
+purple_box -> purple_key
+
+
+
+NOTES: 
+
+Also, remember to return the state if you modified it directly or return the new_state if you deepcopied it.
+
+Remember to make your world model general you can use string checks like .endswith or .beginswith instead of hardcoding a list of entities in your world model.
+
+You can replace the keys of any state dictionary items that transform!
+
+YOU MUST ATTEMPT TO MODEL ALL THE MECHANICS FROM THE ACTION SPACE. 
+
+CURRENT STATE:
+
+{'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[3, 3]], 'agent_direction': [-1, 0], 'agent_carrying': []}
+
+ACTION SPACE:
+
+['left', 'right', 'forward', 'pickup', 'drop', 'toggle']
+
+Replay Buffer (last 15 transitions):
+
+Initial state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 4]], 'agent_direction': [0, -1], 'agent_carrying': []}
+Action: forward
+Next state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [0, -1], 'agent_carrying': []}
+
+Your prediction errors:
+"red_agent": predicted: [[5, 4]]
+"red_agent": actual: [[5, 3]]
+
+
+Initial state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [0, -1], 'agent_carrying': []}
+Action: right
+Next state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [-1, 0], 'agent_carrying': []}
+
+Your prediction errors:
+"agent_direction": predicted: [-1, 0]
+"agent_direction": actual: [-1, 0]
+
+
+Initial state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [-1, 0], 'agent_carrying': []}
+Action: right
+Next state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [0, 1], 'agent_carrying': []}
+
+Your prediction errors:
+"agent_direction": predicted: [-1, 0]
+"agent_direction": actual: [0, 1]
+
+
+Initial state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [0, 1], 'agent_carrying': []}
+Action: toggle
+Next state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [0, 1], 'agent_carrying': []}
+
+Your prediction errors:
+
+
+
+Initial state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [0, 1], 'agent_carrying': []}
+Action: right
+Next state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [1, 0], 'agent_carrying': []}
+
+Your prediction errors:
+"agent_direction": predicted: [0, 1]
+"agent_direction": actual: [0, 1]
+
+
+Initial state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [1, 0], 'agent_carrying': []}
+Action: left
+Next state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [0, 1], 'agent_carrying': []}
+
+Your prediction errors:
+"agent_direction": predicted: [0, 1]
+"agent_direction": actual: [0, 1]
+
+
+Initial state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [0, 1], 'agent_carrying': []}
+Action: left
+Next state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [-1, 0], 'agent_carrying': []}
+
+Your prediction errors:
+"agent_direction": predicted: [0, 1]
+"agent_direction": actual: [-1, 0]
+
+
+Initial state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [-1, 0], 'agent_carrying': []}
+Action: right
+Next state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [0, 1], 'agent_carrying': []}
+
+Your prediction errors:
+"agent_direction": predicted: [-1, 0]
+"agent_direction": actual: [0, 1]
+
+
+Initial state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [0, 1], 'agent_carrying': []}
+Action: pickup
+Next state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [0, 1], 'agent_carrying': []}
+
+Your prediction errors:
+
+
+
+Initial state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [0, 1], 'agent_carrying': []}
+Action: left
+Next state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [-1, 0], 'agent_carrying': []}
+
+Your prediction errors:
+"agent_direction": predicted: [0, 1]
+"agent_direction": actual: [-1, 0]
+
+
+Initial state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [-1, 0], 'agent_carrying': []}
+Action: pickup
+Next state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [-1, 0], 'agent_carrying': []}
+
+Your prediction errors:
+
+
+
+Initial state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[5, 3]], 'agent_direction': [-1, 0], 'agent_carrying': []}
+Action: forward
+Next state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[4, 3]], 'agent_direction': [-1, 0], 'agent_carrying': []}
+
+Your prediction errors:
+"red_agent": predicted: [[5, 3]]
+"red_agent": actual: [[4, 3]]
+
+
+Initial state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[4, 3]], 'agent_direction': [-1, 0], 'agent_carrying': []}
+Action: drop
+Next state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[4, 3]], 'agent_direction': [-1, 0], 'agent_carrying': []}
+
+Your prediction errors:
+
+
+
+Initial state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[4, 3]], 'agent_direction': [-1, 0], 'agent_carrying': []}
+Action: forward
+Next state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[3, 3]], 'agent_direction': [-1, 0], 'agent_carrying': []}
+
+Your prediction errors:
+"red_agent": predicted: [[4, 3]]
+"red_agent": actual: [[3, 3]]
+
+
+Initial state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[3, 3]], 'agent_direction': [-1, 0], 'agent_carrying': []}
+Action: drop
+Next state: {'grey_wall': [[0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0], [1, 7], [1, 0], [2, 7], [2, 0], [3, 7], [3, 0], [4, 7], [4, 0], [5, 7], [5, 0], [6, 7], [6, 0], [7, 7], [7, 6], [7, 5], [7, 4], [7, 3], [7, 2], [7, 1], [7, 0]], 'red_ball': [[1, 1]], 'grey_ball': [[2, 6], [6, 5]], 'green_ball': [[3, 4]], 'yellow_key': [[5, 6]], 'yellow_box': [[6, 3]], 'blue_ball': [[6, 2]], 'purple_key': [[6, 1]], 'red_agent': [[3, 3]], 'agent_direction': [-1, 0], 'agent_carrying': []}
+
+Your prediction errors:
+
+
+
+UTILS:
+
+directions = {
+    'left': [-1, 0],
+    'right': [1, 0],
+    'up': [0, 1],
+    'down': [0, -1],
+}
+
+
+RESPONSE FORMAT:
+
+- Make sure that you return the correct state for example if you made a deepcopy of the state and modify the deep copy then return the new_state
+- If you modify the state directly then return the state instead of new_state
+- Try to generalize your world model. For example, do not just assume that all entities will be the same color in all variations
+- Your world model will be used in other variations where entities will be of different colors, but the principles should remain the same
+- For example, you can use string checks like .endswith instead of hardcoding a list of entities in your world model.
+
+```python
+
+# make sure to include these import statements
+from copy import deepcopy
+from utils import directions
+
+def transition_model(state, action):
+
+
+	Return State
+
+```
